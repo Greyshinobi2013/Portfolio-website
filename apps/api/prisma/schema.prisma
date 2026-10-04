@@ -1,0 +1,38 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model ContactMessage {
+  id          String        @id @default(uuid())
+  name        String
+  email       String
+  subject     String
+  message     String
+  ipAddress   String?
+  userAgent   String?
+  status      MessageStatus @default(UNREAD)
+  createdAt   DateTime      @default(now())
+
+  @@index([email])
+  @@index([createdAt])
+}
+
+model AnalyticsPing {
+  id        String   @id @default(uuid())
+  route     String
+  latencyMs Int
+  createdAt DateTime @default(now())
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  ARCHIVED
+  REPLIED
+}

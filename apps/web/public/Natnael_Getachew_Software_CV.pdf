@@ -1,0 +1,264 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Length 2500 >>
+stream
+0.03 0.05 0.08 rg
+0 0 612 792 re
+f
+0.05 0.07 0.11 rg
+30 30 552 732 re
+f
+0.08 0.11 0.16 rg
+1 w
+30 30 552 732 re
+S
+0.95 0.96 0.98 rg
+BT
+/F2 22 Tf
+50 720 Td
+(NATNAEL GETACHEW) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 11 Tf
+50 702 Td
+(FULL-STACK SOFTWARE ENGINEER | SYSTEMS & DISTRIBUTED WEB) Tj
+ET
+0.6 0.65 0.75 rg
+BT
+/F1 9 Tf
+50 686 Td
+(Addis Ababa, Ethiopia  |  +251 983 833 337  |  getachewnatnael55@gmail.com  |  github.com/NatnaelGetachew) Tj
+ET
+0.2 0.25 0.35 rg
+50 675 512 1 re
+f
+0.0 0.95 1.0 rg
+BT
+/F2 12 Tf
+50 655 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9.5 Tf
+50 638 Td
+(Computer Engineering graduate & IBT College Software Development trainee specializing in Next.js App Router,) Tj
+0 -13 Td
+(React 18, TypeScript, Python architecture, and native Android solutions. Passionate about scalable distributed) Tj
+0 -13 Td
+(systems, sub-100ms algorithmic latency, and clean test-driven architectures.) Tj
+ET
+0.0 0.95 1.0 rg
+BT
+/F2 12 Tf
+50 595 Td
+(CORE TECHNICAL SKILLS) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F2 9.5 Tf
+50 578 Td
+(Frontend:) Tj
+/F1 9.5 Tf
+60 0 Td
+(Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Zustand, Recharts, HTML5, CSS3) Tj
+ET
+BT
+/F2 9.5 Tf
+50 562 Td
+(Backend & DB:) Tj
+/F1 9.5 Tf
+75 0 Td
+(NestJS, Node.js, Express, PostgreSQL, Prisma ORM, REST APIs, TeleBirr Gateway, JWT Auth) Tj
+ET
+BT
+/F2 9.5 Tf
+50 546 Td
+(Architecture:) Tj
+/F1 9.5 Tf
+75 0 Td
+(Python 3 OOP, Directed Graph Routing, Factory & Singleton Patterns, unittest, SQLite) Tj
+ET
+BT
+/F2 9.5 Tf
+50 530 Td
+(Mobile & Tools:) Tj
+/F1 9.5 Tf
+75 0 Td
+(Android Studio, Java/Kotlin, RecyclerView, Git & GitHub PR reviews, Linux/Bash, CI/CD) Tj
+ET
+0.0 0.95 1.0 rg
+BT
+/F2 12 Tf
+50 505 Td
+(PROFESSIONAL EXPERIENCE & LEADERSHIP) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10.5 Tf
+50 488 Td
+(Full-Stack Trainee & Project Lead) Tj
+/F1 9.5 Tf
+170 0 Td
+(- IBT Academy Cohort) Tj
+/F1 9 Tf
+180 0 Td
+((2024 - Present)) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 474 Td
+(- Directing team deliverables for full-stack web products, conducting PR code reviews and architectural audits.) Tj
+0 -12 Td
+(- Implemented test suites and enforced strict TypeScript typing and React 18 concurrent UI patterns.) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10.5 Tf
+50 445 Td
+(Android Developer Intern) Tj
+/F1 9.5 Tf
+145 0 Td
+(- M.A.D Technologies, Addis Ababa) Tj
+/F1 9 Tf
+170 0 Td
+((2022 - 2023)) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 431 Td
+(- Translated high-fidelity Figma UI wireframes into responsive Android layouts with ViewBinding & RecyclerView.) Tj
+0 -12 Td
+(- Implemented offline-first SQLite database synchronization, significantly reducing app startup latency.) Tj
+0 -12 Td
+(- Solved memory leaks and debugged edge-case race conditions in background async tasks.) Tj
+ET
+0.0 0.95 1.0 rg
+BT
+/F2 12 Tf
+50 390 Td
+(FEATURED PROJECTS) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10.5 Tf
+50 373 Td
+(Addis Eats - Next-Gen Food Ordering & TeleBirr Gateway) Tj
+/F1 9 Tf
+240 0 Td
+([Next.js 14, TypeScript, Zustand, TeleBirr]) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 359 Td
+(- Engineered high-velocity ordering platform with sub-city delivery fee calculation and Ethiopian phone validation.) Tj
+0 -12 Td
+(- Architected Zustand cart state engine with inventory-hard ceilings and atomic checkout synchronization.) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10.5 Tf
+50 330 Td
+(AddisBank - Core Banking & Liquidity Transfer Graph) Tj
+/F1 9 Tf
+240 0 Td
+([Python 3.11, Graphs, Design Patterns]) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 316 Td
+(- Designed multi-tier account engine with directed graph inter-branch liquidity routing and zero balance leakage.) Tj
+0 -12 Td
+(- Achieved 100% test assertion coverage using unittest for concurrent transfer limits and invariant checks.) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10.5 Tf
+50 287 Td
+(Native Android Lexicon & Offline Dictionary) Tj
+/F1 9 Tf
+240 0 Td
+([Android Studio, Java/Kotlin, SQLite]) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 273 Td
+(- Built sub-100ms offline terminology search indexing using debounced SQLite queries and custom RecyclerView diffing.) Tj
+ET
+0.0 0.95 1.0 rg
+BT
+/F2 12 Tf
+50 245 Td
+(EDUCATION & CREDENTIALS) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10 Tf
+50 228 Td
+(Advanced Digital Skills: Software Development & QA) Tj
+/F1 9.5 Tf
+260 0 Td
+(- IBT College of Canada (2024 - Present)) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 214 Td
+(- Specialized in modern web architectures (Next.js, React, TypeScript), QA test automation & CI/CD pipelines.) Tj
+ET
+1.0 0.16 0.37 rg
+BT
+/F2 10 Tf
+50 192 Td
+(BSc in Computer Engineering) Tj
+/F1 9.5 Tf
+170 0 Td
+(- Debre Birhan University, Ethiopia (2017 - 2022)) Tj
+ET
+0.8 0.85 0.9 rg
+BT
+/F1 9 Tf
+55 178 Td
+(- 5-year engineering foundation in DSA Algorithms, Distributed Systems, Microprocessors, and Database Systems.) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000000326 00000 n 
+0000000400 00000 n 
+0000000469 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3050
+%%EOF
