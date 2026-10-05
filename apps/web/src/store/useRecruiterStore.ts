@@ -47,7 +47,7 @@ export const useRecruiterStore = create<RecruiterStore>((set) => ({
     status: 'operational',
     dbLatencyMs: 38,
     environment: 'Vercel Serverless',
-    engine: 'NestJS 10 + Prisma',
+    engine: 'NestJS 12 + Prisma',
     provider: 'PostgreSQL (Neon)',
     lastChecked: new Date().toISOString(),
   },

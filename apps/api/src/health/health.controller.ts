@@ -29,7 +29,7 @@ export class HealthController {
     return {
       status: 'operational',
       environment: process.env.VERCEL ? 'Vercel Serverless' : 'Local Edge Runtime',
-      engine: 'NestJS 10 + Prisma',
+      engine: 'NestJS 12 + Prisma',
       database: {
         provider: 'PostgreSQL (Neon)',
         status: dbStatus,
