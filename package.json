@@ -12,7 +12,8 @@
     "build": "npm run build --workspaces",
     "build:web": "npm run build --workspace=apps/web",
     "build:api": "npm run build --workspace=apps/api",
-    "lint": "npm run lint --workspaces"
+    "lint": "npm run lint --workspaces",
+    "postinstall": "prisma generate --schema=apps/api/prisma/schema.prisma"
   },
   "dependencies": {
     "@nestjs/common": "^12.1.2",
