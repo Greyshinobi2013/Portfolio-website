@@ -7,7 +7,6 @@ import CaseStudies from '@/components/CaseStudies';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import DevTerminalModal from '@/components/DevTerminalModal';
 
 export default function HomePage() {
   return (
@@ -15,7 +14,7 @@ export default function HomePage() {
       {/* Sticky Header Navigation */}
       <Navbar />
 
-      {/* Hero Section with Cyber ID Card */}
+      {/* Hero Section with Profile Card */}
       <Hero />
 
       {/* Core Tech Stack Ticker */}
@@ -35,9 +34,6 @@ export default function HomePage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating Interactive Dev Terminal CLI Modal */}
-      <DevTerminalModal />
     </main>
   );
 }

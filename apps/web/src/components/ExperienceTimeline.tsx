@@ -49,40 +49,65 @@ export default function ExperienceTimeline() {
 
               <ul className="space-y-2 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-neon-cyan">
                 <li>
-                  Collaborated with the core engineering group to translate high-fidelity Figma UI wireframes into
-                  responsive native Android layouts using ConstraintLayout, ViewBinding, and RecyclerView adapters.
+                  Collaborated on native Android apps, translating Figma designs into responsive Material layouts with
+                  RecyclerView.
                 </li>
                 <li>
-                  Implemented offline-first SQLite database synchronization, significantly reducing app cold-start
-                  alerts.
+                  Developed standalone Dictionary mobile app with dynamic SearchView queries and local database caching.
                 </li>
                 <li>
                   Conducted code reviews, debugged edge cases in memory management, and adhered to Git pull-request flows.
                 </li>
               </ul>
+
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
+                  Android Studio
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-emerald">
+                  Java &amp; Kotlin
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
+                  SQLite
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
+                  RecyclerView
+                </span>
+              </div>
             </div>
 
-            {/* Experience Card 2: Full-Stack Trainee & Project Lead */}
+            {/* Experience Card 2: Languages & Communication */}
             <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
-                  Full-Stack Trainee &amp; Project Lead
+                  Languages &amp; Communication
                 </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-pink/10 border border-neon-pink/30 text-neon-pink">
-                  2024 — Present
+                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan">
+                  CV: LANGUAGES
                 </span>
               </div>
 
               <div className="text-xs font-mono text-neon-pink font-semibold">
-                IBT Academy Cohort
+                Professional Working Proficiency
               </div>
 
-              <ul className="space-y-2 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-neon-pink">
+              <ul className="space-y-2.5 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-neon-cyan">
                 <li>
-                  Directing team deliverables for full-stack web products, conducting code reviews, implementing test
-                  suites, and driving architectural adherence to React 18 &amp; Python design patterns.
+                  <strong className="text-white">English:</strong> Professional working proficiency (technical documentation, code reviews, and remote communication).
+                </li>
+                <li>
+                  <strong className="text-white">Amharic:</strong> Native proficiency.
                 </li>
               </ul>
+
+              <div className="flex flex-wrap gap-2 pt-1">
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
+                  English (Professional)
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
+                  Amharic (Native)
+                </span>
+              </div>
             </div>
           </div>
 
@@ -95,14 +120,51 @@ export default function ExperienceTimeline() {
               </h3>
             </div>
 
-            {/* Education Card 1: IBT College */}
+            {/* Education Card 1: MSc in Artificial Intelligence */}
+            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
+                  MSc in Artificial Intelligence
+                </h4>
+                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan">
+                  2026 — Present
+                </span>
+              </div>
+
+              <div className="text-xs font-mono text-neon-pink font-semibold">
+                Ethiopian Defense University
+              </div>
+
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Advanced graduate program focusing on statistical intelligence, computational linguistics, and deep
+                neural systems. Coursework: Machine Learning, Statistical Computing, Research Methods and Seminar,
+                Natural Language Processing, Deep Learning, Computer Vision.
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
+                  Machine Learning
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
+                  Deep Learning
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
+                  NLP &amp; Vision
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
+                  Statistical Computing
+                </span>
+              </div>
+            </div>
+
+            {/* Education Card 2: IBT College of Canada */}
             <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
                   Advanced Digital Skills: Software Development &amp; QA
                 </h4>
                 <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-pink/10 border border-neon-pink/30 text-neon-pink">
-                  2024 — Present
+                  2026 — Present
                 </span>
               </div>
 
@@ -111,24 +173,24 @@ export default function ExperienceTimeline() {
               </div>
 
               <p className="text-xs text-gray-300 leading-relaxed">
-                Intensive industry software engineering curriculum emphasizing modern web architectures (Next.js,
-                React, TypeScript), QA test automation, automated CI/CD pipelines, and collaborative software delivery.
+                Six-month intensive industry program covering modern full-stack web development, Next.js/React, REST APIs,
+                Node.js, QA fundamentals, and Git workflows.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-2">
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  React 18
+                  Next.js &amp; React
                 </span>
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  QA Automation
+                  QA Fundamentals
                 </span>
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
-                  REST Architecture
+                  REST APIs &amp; Node.js
                 </span>
               </div>
             </div>
 
-            {/* Education Card 2: Debre Birhan University */}
+            {/* Education Card 3: Debre Birhan University */}
             <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
@@ -144,19 +206,22 @@ export default function ExperienceTimeline() {
               </div>
 
               <p className="text-xs text-gray-300 leading-relaxed">
-                Rigorous 5-year engineering degree encompassing core computing foundations: Data Structures &amp;
-                Algorithms, Object-Oriented Analysis, Database Systems, Computer Networks, and Microprocessor Systems.
+                Comprehensive 5-year engineering degree. Relevant coursework: OOP, Data Structures &amp; Algorithms,
+                Database Systems, and Software Engineering.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-2">
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  DSA Algorithms
+                  OOP Architecture
                 </span>
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
-                  Distributed Systems
+                  DSA Algorithms
                 </span>
                 <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
-                  OOP Architecture
+                  Database Systems
+                </span>
+                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
+                  Software Engineering
                 </span>
               </div>
             </div>

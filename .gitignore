@@ -4,9 +4,11 @@ node_modules/
 .pnp.js
 
 # Build outputs
+**/.next/
 .next/
 out/
 build/
+**/dist/
 dist/
 
 # Prisma
@@ -26,8 +28,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 .turbo
+*.tsbuildinfo
 
 # OS files
 .DS_Store
 *.pem
 Thumbs.db
+.vercel
+.env*

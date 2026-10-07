@@ -1,12 +1,23 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useRecruiterStore } from '@/store/useRecruiterStore';
-import { Terminal, Download, Zap, Menu, X, FileText } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { useThemeStore } from '@/store/useThemeStore';
+import { Download, Menu, X, Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
-  const { isRecruiterMode, toggleRecruiterMode, toggleTerminal } = useRecruiterStore();
+  const { theme, toggleTheme, setTheme } = useThemeStore();
+  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const saved = localStorage.getItem('portfolio_theme');
+    if (saved === 'light') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }, [setTheme]);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -45,30 +56,17 @@ export default function Navbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Recruiter Mode Toggle */}
-          <button
-            onClick={toggleRecruiterMode}
-            className={`hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-mono border transition-all ${
-              isRecruiterMode
-                ? 'bg-neon-pink/15 border-neon-pink text-neon-pink shadow-pink-glow'
-                : 'bg-canvas-card border-cyber text-gray-400 hover:text-white hover:border-gray-600'
-            }`}
-            title="Toggle Recruiter / Tech Deep-Dive Mode"
-          >
-            <Zap className={`w-3 h-3 ${isRecruiterMode ? 'fill-neon-pink text-neon-pink' : ''}`} />
-            <span>RECRUITER MODE: <strong className="font-bold">{isRecruiterMode ? 'ON' : 'OFF'}</strong></span>
-          </button>
-
-          {/* Status Pill: OPEN TO WORK */}
-          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neon-emerald/10 border border-neon-emerald/30 text-[11px] font-mono text-neon-emerald">
+          {/* Status Pill: OPEN TO INTERNSHIPS */}
+          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neon-emerald/10 border border-neon-emerald/30 text-[11px] font-mono text-neon-emerald">
             <span className="w-1.5 h-1.5 rounded-full bg-neon-emerald pulsing-dot"></span>
-            <span className="tracking-wider">OPEN TO WORK</span>
+            <span className="tracking-wider">OPEN TO INTERNSHIPS</span>
           </div>
 
           {/* Download CV Button */}
           <a
             href="/Natnael_Getachew_Software_CV.pdf"
             download="Natnael_Getachew_Software_CV.pdf"
+            aria-label="Download Natnael Getachew Software Engineering CV PDF"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-neon-pink hover:bg-neon-magenta text-white font-mono text-xs font-bold transition-all shadow-pink-glow active:scale-95"
             title="Download Natnael Getachew Software Engineering CV"
           >
@@ -77,13 +75,18 @@ export default function Navbar() {
             <span className="xs:hidden">CV</span>
           </a>
 
-          {/* Dev Terminal Launcher */}
+          {/* Light/Dark Theme Toggle Button */}
           <button
-            onClick={toggleTerminal}
-            className="p-1.5 rounded bg-canvas-card border border-cyber hover:border-neon-cyan hover:text-neon-cyan text-gray-300 font-mono text-xs transition-colors flex items-center justify-center"
-            title="Launch Interactive Dev Terminal (>_)"
+            onClick={toggleTheme}
+            className="p-1.5 rounded bg-canvas-card border border-cyber hover:border-amber-400 text-gray-300 hover:text-amber-400 font-mono text-xs transition-colors flex items-center justify-center group active:scale-95"
+            title={mounted && theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+            aria-label="Toggle Light and Dark Mode"
           >
-            <span className="font-mono text-xs font-bold text-neon-cyan px-1">&gt;_</span>
+            {mounted && theme === 'light' ? (
+              <Moon className="w-4 h-4 text-neon-cyan group-hover:-rotate-12 transition-transform" />
+            ) : (
+              <Sun className="w-4 h-4 text-amber-400 group-hover:rotate-45 transition-transform" />
+            )}
           </button>
 
           {/* Mobile Menu Button */}
@@ -96,14 +99,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Recruiter Mode Active Banner */}
-      {isRecruiterMode && (
-        <div className="w-full bg-neon-pink/10 border-b border-neon-pink/30 py-1 px-4 text-center font-mono text-[11px] text-neon-pink flex items-center justify-center gap-2 animate-pulse">
-          <Zap className="w-3 h-3 fill-neon-pink" />
-          <span>RECRUITER &amp; ARCHITECTURE MODE ACTIVE — SQL PLANS, PRISMA MODELS &amp; TELEMETRY UNLOCKED</span>
-        </div>
-      )}
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
@@ -122,24 +117,33 @@ export default function Navbar() {
           </div>
 
           <div className="pt-2 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                toggleRecruiterMode();
-                setMobileMenuOpen(false);
-              }}
-              className={`flex items-center justify-center gap-2 py-2 px-3 rounded text-xs font-mono border ${
-                isRecruiterMode
-                  ? 'bg-neon-pink/20 border-neon-pink text-neon-pink'
-                  : 'bg-canvas-elevated border-cyber text-gray-300'
-              }`}
+            {/* Mobile Download CV */}
+            <a
+              href="/Natnael_Getachew_Software_CV.pdf"
+              download="Natnael_Getachew_Software_CV.pdf"
+              className="flex items-center justify-center gap-2 py-2 px-3 rounded text-xs font-mono font-bold bg-neon-pink text-white text-center shadow-pink-glow"
             >
-              <Zap className="w-3.5 h-3.5" />
-              <span>Recruiter Mode: {isRecruiterMode ? 'ACTIVE' : 'DISABLED'}</span>
+              <Download className="w-3.5 h-3.5" />
+              <span>DOWNLOAD CV (PDF)</span>
+            </a>
+
+            {/* Mobile Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center gap-2 py-2 px-3 rounded text-xs font-mono border bg-canvas-elevated border-cyber text-gray-300 hover:text-white"
+            >
+              {mounted && theme === 'light' ? (
+                <>
+                  <Moon className="w-4 h-4 text-neon-cyan" />
+                  <span>Switch to Dark Mode</span>
+                </>
+              ) : (
+                <>
+                  <Sun className="w-4 h-4 text-amber-400" />
+                  <span>Switch to Light Mode</span>
+                </>
+              )}
             </button>
-            <div className="flex items-center justify-center gap-2 py-1.5 text-xs text-neon-emerald font-mono">
-              <span className="w-2 h-2 rounded-full bg-neon-emerald pulsing-dot"></span>
-              <span>Available for Hire &amp; Internships</span>
-            </div>
           </div>
         </div>
       )}

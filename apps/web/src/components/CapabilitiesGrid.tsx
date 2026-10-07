@@ -1,16 +1,14 @@
 'use client';
 
 import React from 'react';
-import { useRecruiterStore } from '@/store/useRecruiterStore';
 import {
   Layout,
   Server,
-  Network,
-  Smartphone,
-  GitBranch,
+  Code,
+  Brain,
   ShieldCheck,
+  Wrench,
   CheckCircle2,
-  Code2,
 } from 'lucide-react';
 
 interface CapabilityCard {
@@ -22,115 +20,92 @@ interface CapabilityCard {
   iconColor: string;
   description: string;
   skills: string[];
-  recruiterSpec: {
-    label: string;
-    details: string;
-    metric: string;
-  };
+  specLabel: string;
+  specMetric: string;
 }
 
 const CAPABILITIES: CapabilityCard[] = [
   {
     id: 'frontend',
-    title: 'Modern Web Systems',
-    tag: 'FRONTEND CORE',
+    title: 'Frontend Systems',
+    tag: 'CV: FRONTEND',
     tagColor: 'text-neon-pink border-neon-pink/30 bg-neon-pink/10',
     icon: <Layout className="w-5 h-5 text-neon-pink" />,
     iconColor: 'border-neon-pink/40 bg-neon-pink/10',
     description:
-      'Architecting responsive, accessible user interfaces with React 18 concurrencies, Next.js App Router, SSR/SSG patterns, and predictable state hydration.',
-    skills: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Recharts'],
-    recruiterSpec: {
-      label: 'SSR & Hydration Benchmark',
-      details: 'Strict client/server component segregation with zero hydration mismatch and sub-800ms First Contentful Paint.',
-      metric: 'Lighthouse: 100/100 | LCP: 0.72s',
-    },
+      'Architected responsive, full-stack web applications and robust front-ends using Next.js (App Router), React 18, and modern JavaScript (ES6+)/TypeScript.',
+    skills: ['Next.js (App Router)', 'React 18', 'Zustand', 'Recharts', 'Responsive UI', 'CSS Modules'],
+    specLabel: 'App Router Architecture',
+    specMetric: 'Next.js App Router | React 18',
   },
   {
     id: 'backend',
-    title: 'APIs & Distributed Logic',
-    tag: 'BACKEND & SERVICES',
+    title: 'Backend & APIs',
+    tag: 'CV: BACKEND & APIS',
     tagColor: 'text-neon-cyan border-neon-cyan/30 bg-neon-cyan/10',
     icon: <Server className="w-5 h-5 text-neon-cyan" />,
     iconColor: 'border-neon-cyan/40 bg-neon-cyan/10',
     description:
-      'Constructing REST endpoints, implementing strict schema validation, security session guards, payment gateway hooks, and database interfaces.',
-    skills: ['REST API Design', 'Node.js & Express', 'TeleBirr API', 'JSON Schema', 'JWT Auth', 'Postman'],
-    recruiterSpec: {
-      label: 'Security & Throttling Spec',
-      details: 'NestJS ThrottlerGuard (5 req/min per IP), DTO validation via class-validator, and atomic PostgreSQL connection pooling.',
-      metric: 'Rate-Limit: 5 req/min | P99: 42ms',
-    },
+      'Constructing REST endpoints, implementing strict JSON schema validation, session guards, and TeleBirr payment API integration.',
+    skills: ['REST APIs', 'Node.js', 'Nest.js', 'TeleBirr API Integration', 'JSON Schema', 'Session Guards'],
+    specLabel: 'TeleBirr & Security Guards',
+    specMetric: 'TeleBirr Gateway | Session Guards',
+  },
+  {
+    id: 'languages',
+    title: 'Programming Languages',
+    tag: 'CV: LANGUAGES',
+    tagColor: 'text-amber-400 border-amber-400/30 bg-amber-400/10',
+    icon: <Code className="w-5 h-5 text-amber-400" />,
+    iconColor: 'border-amber-400/40 bg-amber-400/10',
+    description:
+      'Multi-language foundations in modern web scripting, strongly typed applications, object-oriented systems, and database queries.',
+    skills: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Python', 'Java', 'Kotlin', 'SQL'],
+    specLabel: 'Core Languages',
+    specMetric: 'TypeScript • Python • Kotlin • SQL',
   },
   {
     id: 'architecture',
-    title: 'OOP & Data Structures',
-    tag: 'ARCHITECTURE',
-    tagColor: 'text-neon-amber border-neon-amber/30 bg-neon-amber/10',
-    icon: <Network className="w-5 h-5 text-neon-amber" />,
-    iconColor: 'border-neon-amber/40 bg-neon-amber/10',
-    description:
-      'Architecting enterprise Python engines utilizing Design Patterns (Factory, Registry, Decorator), directed graph algorithms, and comprehensive unittest suites.',
-    skills: ['Python 3 OOP', 'Directed Graph Routing', 'Factory Pattern', 'unittest', 'Ledger Consistency'],
-    recruiterSpec: {
-      label: 'Graph Routing Algorithmic Complexity',
-      details: 'Directed acyclic liquidity graph traversal avoiding cyclic locks with O(V + E) Dijkstra shortest capacity path.',
-      metric: 'Complexity: O(V + E) | Invariant: 0 Leakage',
-    },
-  },
-  {
-    id: 'mobile',
-    title: 'Native Mobile Development',
-    tag: 'MOBILE',
-    tagColor: 'text-neon-emerald border-neon-emerald/30 bg-neon-emerald/10',
-    icon: <Smartphone className="w-5 h-5 text-neon-emerald" />,
-    iconColor: 'border-neon-emerald/40 bg-neon-emerald/10',
-    description:
-      'Building responsive Android applications in Android Studio using Java/Kotlin, RecyclerView diffing, ViewBinding, and local SQLite data persistence.',
-    skills: ['Android Studio', 'Java & Kotlin', 'SQLite', 'RecyclerView', 'Offline Caching'],
-    recruiterSpec: {
-      label: 'Mobile Storage & Frame Rate Spec',
-      details: 'B-tree indexed SQLite database with Async DiffUtil background recalculation maintaining locked 60fps scrolling.',
-      metric: 'Query: < 8ms | Refresh: 60 FPS Lock',
-    },
-  },
-  {
-    id: 'devops',
-    title: 'Engineering Disciplines & DevOps',
-    tag: 'WORKFLOWS & TOOLCHAIN',
+    title: 'Architecture & Quality',
+    tag: 'CV: ARCHITECTURE & QA',
     tagColor: 'text-neon-pink border-neon-pink/30 bg-neon-pink/10',
-    icon: <GitBranch className="w-5 h-5 text-neon-pink" />,
+    icon: <ShieldCheck className="w-5 h-5 text-neon-pink" />,
     iconColor: 'border-neon-pink/40 bg-neon-pink/10',
     description:
-      'Adhering to strict Git branching patterns, pull-request peer reviews, automated regression checks, CI/CD pipeline principles, and high-fidelity Figma translation.',
-    skills: ['GIT & PR Reviews', 'Linux / Bash', 'Vite & Next Bundlers', 'Figma UI', 'CI Pipeline Testing'],
-    recruiterSpec: {
-      label: 'Continuous Integration Blueprint',
-      details: 'Automated GitHub Actions linting, strict TypeScript build gating, and atomic preview environments with zero deployment drift.',
-      metric: 'CI Pipeline: Automated | Tests: 100% Gated',
-    },
+      'Engineering robust digital products adhering to OOP design patterns, SOLID principles, client storage persistence, and rigorous unit testing.',
+    skills: ['Unit Testing (Jest/unittest)', 'Functional QA & Test Plans', 'Boundary Value Analysis', 'OOP Design Patterns', 'SOLID Principles', 'LocalStorage/SessionStorage'],
+    specLabel: 'Verification & Quality Spec',
+    specMetric: 'SOLID Design • Unit Testing • Functional QA',
   },
   {
-    id: 'qa',
-    title: 'Testing & Quality Assurance',
-    tag: 'TESTING & VERIFICATION',
+    id: 'tools',
+    title: 'Tools & Environments',
+    tag: 'CV: TOOLS',
+    tagColor: 'text-neon-emerald border-neon-emerald/30 bg-neon-emerald/10',
+    icon: <Wrench className="w-5 h-5 text-neon-emerald" />,
+    iconColor: 'border-neon-emerald/40 bg-neon-emerald/10',
+    description:
+      'Comprehensive toolchain proficiency across version control, native mobile IDEs, API debugging platforms, and UI wireframing.',
+    skills: ['Git / GitHub', 'VS Code', 'Postman', 'Vite', 'Android Studio', 'Linux', 'Figma', 'Google stitch'],
+    specLabel: 'Toolchain & Workflows',
+    specMetric: 'Git/GitHub • Android Studio • Postman',
+  },
+  {
+    id: 'ai',
+    title: 'Artificial Intelligence (MSc)',
+    tag: 'CV: EDUCATION & AI',
     tagColor: 'text-neon-cyan border-neon-cyan/30 bg-neon-cyan/10',
-    icon: <ShieldCheck className="w-5 h-5 text-neon-cyan" />,
+    icon: <Brain className="w-5 h-5 text-neon-cyan" />,
     iconColor: 'border-neon-cyan/40 bg-neon-cyan/10',
     description:
-      'Engineering robust test suites covering unit tests, integration assertions, API scenario automation, regression suites, and boundary condition checks.',
-    skills: ['Unit Testing', 'Regression Checks', 'API Scenario Automation', 'Coverage Analysis', 'Mock Services'],
-    recruiterSpec: {
-      label: 'Verification & Coverage Metric',
-      details: 'Python unittest + Jest frontend scenario tests asserting state transitions, negative edge cases, and arithmetic tolerances.',
-      metric: 'Coverage: High-Yield | Fail-Safe Design',
-    },
+      'Postgraduate coursework and research in artificial intelligence at Ethiopian Defense University covering computational learning and neural systems.',
+    skills: ['Machine Learning', 'Statistical Computing', 'Research Methods & Seminar', 'Natural Language Processing', 'Deep Learning', 'Computer Vision'],
+    specLabel: 'Postgraduate AI Program',
+    specMetric: 'MSc AI Scholar | Ethiopian Defense Univ',
   },
 ];
 
 export default function CapabilitiesGrid() {
-  const { isRecruiterMode } = useRecruiterStore();
-
   return (
     <section id="skills" className="py-16 md:py-24 bg-canvas border-b border-cyber relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,9 +128,7 @@ export default function CapabilitiesGrid() {
           {CAPABILITIES.map((cap) => (
             <div
               key={cap.id}
-              className={`rounded-xl bg-canvas-card border transition-all duration-300 p-6 flex flex-col justify-between group hover:border-gray-600 hover:shadow-card-glow ${
-                isRecruiterMode ? 'border-neon-pink/30 bg-canvas-card/90' : 'border-cyber'
-              }`}
+              className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all duration-300 p-6 flex flex-col justify-between group hover:shadow-card-glow"
             >
               <div>
                 {/* Card Top: Icon & Category Tag */}
@@ -181,7 +154,7 @@ export default function CapabilitiesGrid() {
                 </p>
               </div>
 
-              {/* Skills Badges & Recruiter Mode Reveal */}
+              {/* Skills Badges & Specification Footnote */}
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-1.5 pt-2 border-t border-cyber/50">
                   {cap.skills.map((skill) => (
@@ -194,24 +167,14 @@ export default function CapabilitiesGrid() {
                   ))}
                 </div>
 
-                {/* Recruiter Mode Engineering Proof */}
-                {isRecruiterMode && (
-                  <div className="pt-3 border-t border-neon-pink/30 bg-neon-pink/5 -mx-6 -mb-6 p-4 rounded-b-xl text-[11px] font-mono space-y-1.5 animate-fadeIn">
-                    <div className="flex items-center justify-between text-neon-pink font-semibold">
-                      <span className="flex items-center gap-1">
-                        <Code2 className="w-3.5 h-3.5" /> {cap.recruiterSpec.label}
-                      </span>
-                      <span className="text-[10px] text-gray-400">SPEC CHECK</span>
-                    </div>
-                    <p className="text-gray-300 text-[10.5px] leading-tight">
-                      {cap.recruiterSpec.details}
-                    </p>
-                    <div className="pt-1 flex items-center gap-1.5 text-neon-cyan font-bold text-[10px]">
-                      <CheckCircle2 className="w-3 h-3 text-neon-emerald" />
-                      <span>{cap.recruiterSpec.metric}</span>
-                    </div>
-                  </div>
-                )}
+                {/* Technical Pillar Verification (Always Visible) */}
+                <div className="pt-3 border-t border-cyber/50 flex flex-wrap items-center justify-between gap-1 text-[11px] font-mono">
+                  <span className="text-gray-400">{cap.specLabel}</span>
+                  <span className="text-neon-cyan font-bold flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald shrink-0" />
+                    <span>{cap.specMetric}</span>
+                  </span>
+                </div>
               </div>
             </div>
           ))}

@@ -15,7 +15,7 @@ export default function Footer() {
             <div>
               <div className="font-bold text-white tracking-wide">Natnael Getachew</div>
               <div className="text-[11px] text-neon-cyan font-medium">
-                Full-Stack Engineer • Addis Ababa, Ethiopia
+                Software Developer Intern • Addis Ababa, Ethiopia
               </div>
             </div>
           </div>

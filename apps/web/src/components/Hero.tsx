@@ -18,21 +18,25 @@ export default function Hero() {
             {/* Availability Pill */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-pink/10 border border-neon-pink/30 text-neon-pink font-mono text-xs font-semibold tracking-wider">
               <Star className="w-3.5 h-3.5 fill-neon-pink" />
-              <span>AVAILABLE FOR INTERNSHIPS &amp; FULL-STACK ROLES</span>
+              <span>SEEKING SOFTWARE DEVELOPER OR QA INTERNSHIP</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-white tracking-tight leading-[1.12]">
-              Crafting <span className="text-neon-pink drop-shadow-[0_0_20px_rgba(255,42,95,0.45)]">Scalable</span>{' '}
-              <span className="text-neon-cyan drop-shadow-[0_0_20px_rgba(0,242,254,0.45)]">Web</span>{' '}
-              Applications &amp; Resilient Systems.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-white tracking-tight leading-[1.12]">
+              Software Developer Intern <br className="hidden sm:inline" />
+              <span className="text-neon-pink drop-shadow-[0_0_20px_rgba(255,42,95,0.45)]">Next.js</span> ·{' '}
+              <span className="text-neon-cyan drop-shadow-[0_0_20px_rgba(0,242,254,0.45)]">React</span> ·{' '}
+              <span className="text-white">JavaScript/TypeScript</span> ·{' '}
+              <span className="text-neon-emerald">Python</span>
             </h1>
 
             {/* Bio Paragraph */}
             <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-              Hi, I&apos;m <strong className="text-white font-semibold">Natnael Getachew</strong> — a Computer Engineering
-              graduate &amp; IBT College Software Development trainee specializing in Next.js App Router, React 18,
-              TypeScript, Python architecture, and native Android solutions.
+              BSc Computer Engineering graduate from Debre Birhan University (2022), MSc Artificial Intelligence scholar at
+              Ethiopian Defense University, and IBT College of Canada Software Development trainee. Architected responsive,
+              full-stack web applications and robust front-ends using Next.js (App Router), React 18, and modern
+              JavaScript (ES6+)/TypeScript. Seeking a Software Developer or QA-focused internship where I can contribute to
+              reliable, user-centered digital products.
             </p>
 
             {/* Metadata Pills */}
@@ -68,7 +72,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://github.com/NatnaelGetachew"
+                href="https://github.com/Greyshinobi2013"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-canvas-card border border-cyber hover:border-neon-cyan text-gray-200 hover:text-white font-mono text-xs sm:text-sm font-medium transition-all"

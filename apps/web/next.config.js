@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
   },
   async rewrites() {
     if (process.env.API_PROXY_URL) {

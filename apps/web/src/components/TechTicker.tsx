@@ -3,17 +3,17 @@
 import React from 'react';
 
 const TECH_ITEMS = [
-  { name: 'Next.js 14 (App Router)', color: 'bg-neon-cyan' },
-  { name: 'React 18 & Hooks', color: 'bg-neon-cyan' },
-  { name: 'TypeScript', color: 'bg-neon-cyan' },
-  { name: 'Zustand State Engine', color: 'bg-neon-pink' },
-  { name: 'Python OOP & Patterns', color: 'bg-neon-pink' },
-  { name: 'Android SDK & Kotlin', color: 'bg-neon-emerald' },
-  { name: 'Recharts Analytics', color: 'bg-neon-cyan' },
-  { name: 'Tailwind CSS', color: 'bg-neon-pink' },
-  { name: 'REST API & TeleBirr', color: 'bg-neon-emerald' },
-  { name: 'PostgreSQL & Prisma', color: 'bg-neon-cyan' },
-  { name: 'Docker & CI/CD', color: 'bg-neon-emerald' },
+  { name: 'Next.js (App Router)', color: 'bg-neon-cyan' },
+  { name: 'React 18 & Zustand', color: 'bg-neon-cyan' },
+  { name: 'TypeScript & ES6+', color: 'bg-neon-cyan' },
+  { name: 'Python OOP & AI Models', color: 'bg-neon-pink' },
+  { name: 'TeleBirr API Integration', color: 'bg-neon-emerald' },
+  { name: 'REST APIs & Nest.js', color: 'bg-neon-pink' },
+  { name: 'Unit Testing & Functional QA', color: 'bg-neon-cyan' },
+  { name: 'Android Studio & Kotlin', color: 'bg-neon-emerald' },
+  { name: 'PostgreSQL & SQL', color: 'bg-neon-cyan' },
+  { name: 'CSS Modules & Tailwind', color: 'bg-neon-pink' },
+  { name: 'Git & GitHub Workflows', color: 'bg-neon-emerald' },
 ];
 
 export default function TechTicker() {
