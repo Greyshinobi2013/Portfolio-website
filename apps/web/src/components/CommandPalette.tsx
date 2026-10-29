@@ -262,7 +262,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
                       <div className="text-[11px] text-gray-400">{cmd.subtitle}</div>
                     </div>
                   </div>
-                  <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-canvas border border-cyber text-gray-400">
+                  <span className="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas border border-cyber text-gray-400 font-sans">
                     {cmd.category}
                   </span>
                 </button>
@@ -272,18 +272,17 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
         </div>
 
         {/* Footer shortcuts hint */}
-        <div className="px-4 py-2.5 bg-canvas-subtle/50 border-t border-cyber flex items-center justify-between text-[11px] text-gray-400 font-mono">
+        <div className="px-4 py-2.5 bg-canvas-subtle/50 border-t border-cyber flex items-center justify-between text-xs text-gray-400 font-sans">
           <div className="flex items-center gap-2">
             <span>Use</span>
-            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px]">↑</kbd>
-            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px]">↓</kbd>
+            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px] font-mono">↑</kbd>
+            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px] font-mono">↓</kbd>
             <span>to navigate</span>
-            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px]">↵</kbd>
+            <kbd className="px-1.5 py-0.5 rounded bg-canvas border border-cyber text-[10px] font-mono">↵</kbd>
             <span>to select</span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-agency-primary" />
-            <span>Natnael Getachew Studio</span>
+          <div className="flex items-center gap-1.5 text-gray-400">
+            <span>Software &amp; QA Engineer</span>
           </div>
         </div>
       </div>

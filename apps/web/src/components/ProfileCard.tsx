@@ -109,12 +109,12 @@ export default function ProfileCard() {
         <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-cyber text-xs">
           <div className="flex items-center gap-1.5 text-gray-400 font-mono text-[11px]">
             <ShieldCheck className="w-3.5 h-3.5 text-agency-primary" />
-            <span className="font-semibold text-gray-300">VERIFIED ENGINEER</span>
+            <span className="font-semibold text-gray-300 font-sans text-xs">Verified Engineer</span>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-agency-emerald/10 border border-agency-emerald/20 text-agency-emerald text-[11px] font-mono font-medium">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-agency-emerald/10 border border-agency-emerald/20 text-agency-emerald text-xs font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-agency-emerald pulsing-dot" />
-            <span>AVAILABLE TO HIRE</span>
+            <span>Available to hire</span>
           </div>
         </div>
 
@@ -152,20 +152,20 @@ export default function ProfileCard() {
         </div>
 
         {/* Live Local Time & Location Pill */}
-        <div className="mt-4 grid grid-cols-2 gap-2 text-xs font-mono">
+        <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
           <div className="p-2.5 rounded-xl bg-canvas-elevated/70 border border-cyber flex items-center gap-2">
             <MapPin className="w-3.5 h-3.5 text-agency-rose shrink-0" />
             <div className="truncate">
-              <span className="text-[10px] text-gray-400 block">LOCATION</span>
-              <span className="text-gray-200 font-medium text-[11px]">Addis Ababa, ET</span>
+              <span className="text-xs text-gray-400 block font-medium">Location</span>
+              <span className="text-gray-200 font-medium text-xs">Addis Ababa, ET</span>
             </div>
           </div>
 
           <div className="p-2.5 rounded-xl bg-canvas-elevated/70 border border-cyber flex items-center gap-2">
             <Clock className="w-3.5 h-3.5 text-agency-cyan shrink-0" />
             <div className="truncate">
-              <span className="text-[10px] text-gray-400 block">LOCAL TIME (EAT)</span>
-              <span className="text-agency-cyan font-semibold text-[11px]">
+              <span className="text-xs text-gray-400 block font-medium">Local Time (EAT)</span>
+              <span className="text-agency-cyan font-semibold text-xs font-mono">
                 {currentTime || 'Loading...'}
               </span>
             </div>
@@ -175,24 +175,24 @@ export default function ProfileCard() {
         {/* Core Pillars List */}
         <div className="mt-4 space-y-2 text-xs">
           <div className="flex items-center justify-between py-1.5 border-b border-cyber/50">
-            <span className="text-gray-400 text-[11px]">Focus</span>
+            <span className="text-gray-400 text-xs">Focus</span>
             <span className="text-gray-200 font-medium">Full-Stack Web &amp; QA Engineering</span>
           </div>
           <div className="flex items-center justify-between py-1.5 border-b border-cyber/50">
-            <span className="text-gray-400 text-[11px]">Core Stack</span>
-            <span className="text-agency-primary font-mono text-[11px] font-semibold">
+            <span className="text-gray-400 text-xs">Core Stack</span>
+            <span className="text-agency-primary font-mono text-xs font-semibold">
               Next.js 16 • React 18 • TypeScript
             </span>
           </div>
           <div className="flex items-center justify-between py-1.5 border-b border-cyber/50">
-            <span className="text-gray-400 text-[11px]">AI &amp; Backend</span>
-            <span className="text-agency-emerald font-mono text-[11px] font-semibold">
+            <span className="text-gray-400 text-xs">AI &amp; Backend</span>
+            <span className="text-agency-emerald font-mono text-xs font-semibold">
               Python • NestJS • TeleBirr API
             </span>
           </div>
           <div className="flex items-center justify-between py-1.5">
-            <span className="text-gray-400 text-[11px]">Education</span>
-            <span className="text-gray-300 text-[11px]">Defense Univ (MSc) &amp; DBU (BSc)</span>
+            <span className="text-gray-400 text-xs">Education</span>
+            <span className="text-gray-300 text-xs">Defense Univ (MSc) &amp; DBU (BSc)</span>
           </div>
         </div>
 
@@ -200,18 +200,18 @@ export default function ProfileCard() {
         <div className="mt-4 pt-3.5 border-t border-cyber flex items-center justify-between gap-2">
           <button
             onClick={handleCopyEmail}
-            className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber text-xs font-mono transition-all active:scale-95"
+            className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber text-xs transition-all active:scale-[0.98]"
             title="Click to copy email address"
           >
             {copied ? (
               <>
                 <Check className="w-3.5 h-3.5 text-agency-emerald" />
-                <span className="text-agency-emerald font-semibold">COPIED!</span>
+                <span className="text-agency-emerald font-semibold">Copied!</span>
               </>
             ) : (
               <>
                 <Copy className="w-3.5 h-3.5 text-gray-400" />
-                <span>COPY EMAIL</span>
+                <span className="font-medium">Copy email</span>
               </>
             )}
           </button>
@@ -220,7 +220,7 @@ export default function ProfileCard() {
             href="https://github.com/Greyshinobi2013"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber transition-all"
+            className="p-2 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber transition-all active:scale-[0.98]"
             title="Visit GitHub Profile"
           >
             <Github className="w-4 h-4" />
@@ -230,7 +230,7 @@ export default function ProfileCard() {
             href="https://linkedin.com/in/natnaelgetachew"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber transition-all"
+            className="p-2 rounded-xl bg-canvas-elevated hover:bg-canvas text-gray-300 hover:text-white border border-cyber transition-all active:scale-[0.98]"
             title="Visit LinkedIn Profile"
           >
             <Linkedin className="w-4 h-4" />

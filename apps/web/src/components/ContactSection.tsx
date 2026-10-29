@@ -255,7 +255,7 @@ export default function ContactSection() {
 
             {/* Direct Contact Channels Card */}
             <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-4 shadow-agency-card card-specular">
-              <h3 className="font-mono text-xs font-bold text-gray-300 uppercase tracking-wider">
+              <h3 className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
                 Direct Communication Channels
               </h3>
 
@@ -266,7 +266,7 @@ export default function ContactSection() {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 font-mono block">PRIMARY INBOX</span>
+                    <span className="text-[11px] text-gray-400 block font-sans">Primary Email</span>
                     <a
                       href="mailto:getachewnatnael55@gmail.com"
                       className="text-xs sm:text-sm font-medium text-white hover:text-agency-primary transition-colors truncate block"
@@ -278,7 +278,7 @@ export default function ContactSection() {
 
                 <button
                   onClick={() => copyToClipboard('getachewnatnael55@gmail.com', 'email')}
-                  className="p-2 rounded-lg bg-canvas hover:bg-canvas-card text-gray-400 hover:text-white border border-cyber text-xs transition-colors shrink-0"
+                  className="p-2 rounded-lg bg-canvas hover:bg-canvas-card text-gray-400 hover:text-white border border-cyber text-xs transition-colors shrink-0 active:scale-[0.98]"
                   title="Copy email to clipboard"
                 >
                   {copiedField === 'email' ? (
@@ -296,7 +296,7 @@ export default function ContactSection() {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div className="truncate">
-                    <span className="text-[10px] text-gray-400 font-mono block">DIRECT MOBILE &amp; WHATSAPP</span>
+                    <span className="text-[11px] text-gray-400 block font-sans">Direct Mobile &amp; WhatsApp</span>
                     <a
                       href="tel:+251983833337"
                       className="text-xs sm:text-sm font-medium text-white hover:text-agency-emerald transition-colors font-mono truncate block"
@@ -308,7 +308,7 @@ export default function ContactSection() {
 
                 <button
                   onClick={() => copyToClipboard('+251983833337', 'phone')}
-                  className="p-2 rounded-lg bg-canvas hover:bg-canvas-card text-gray-400 hover:text-white border border-cyber text-xs transition-colors shrink-0"
+                  className="p-2 rounded-lg bg-canvas hover:bg-canvas-card text-gray-400 hover:text-white border border-cyber text-xs transition-colors shrink-0 active:scale-[0.98]"
                   title="Copy phone number"
                 >
                   {copiedField === 'phone' ? (
@@ -371,19 +371,19 @@ export default function ContactSection() {
             <div className="rounded-2xl bg-canvas-card border border-cyber p-6 sm:p-8 shadow-agency-card card-specular">
               {/* Form Top HUD */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 border-b border-cyber">
-                <span className="font-mono text-xs font-bold text-gray-300 uppercase tracking-wider">
-                  DIRECT MESSAGE INGRESS FORM
+                <span className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
+                  Direct Message Ingress
                 </span>
 
                 {hasDraft && (
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-mono text-agency-emerald flex items-center gap-1">
+                    <span className="text-xs text-agency-emerald flex items-center gap-1 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-agency-emerald pulsing-dot" />
-                      <span>Draft preserved locally</span>
+                      <span>Draft saved locally</span>
                     </span>
                     <button
                       onClick={clearDraft}
-                      className="text-[11px] font-mono text-gray-400 hover:text-agency-rose underline flex items-center gap-1"
+                      className="text-xs text-gray-400 hover:text-agency-rose underline flex items-center gap-1 active:scale-[0.98]"
                       title="Clear saved message draft"
                     >
                       <RotateCcw className="w-3 h-3" />
@@ -411,7 +411,7 @@ export default function ContactSection() {
                     <div className="space-y-1.5">
                       <p>{feedback.message}</p>
                       {feedback.latencyMs && (
-                        <p className="text-[11px] font-mono opacity-80">
+                        <p className="text-xs font-mono opacity-80">
                           Telemetry: Dispatch completed in {feedback.latencyMs}ms.
                         </p>
                       )}
@@ -419,9 +419,9 @@ export default function ContactSection() {
                         <div className="pt-2">
                           <a
                             href={feedback.mailtoUrl}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-bold font-mono transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-semibold transition-colors active:scale-[0.98]"
                           >
-                            <span>OPEN IN LOCAL EMAIL CLIENT</span>
+                            <span>Open in email client</span>
                             <ExternalLink className="w-3.5 h-3.5" />
                           </a>
                         </div>
@@ -433,8 +433,8 @@ export default function ContactSection() {
 
               {/* Quick Subject Select Pills */}
               <div className="mb-5">
-                <label className="block text-xs font-mono text-gray-400 uppercase tracking-wider mb-2">
-                  Quick Select Inquiry Type:
+                <label className="block text-xs font-medium text-gray-300 mb-2">
+                  Select inquiry type:
                 </label>
                 <div className="flex flex-wrap gap-1.5">
                   {subjectPills.map((pill) => (
@@ -442,7 +442,7 @@ export default function ContactSection() {
                       key={pill}
                       type="button"
                       onClick={() => updateField('subject', pill)}
-                      className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-all ${
+                      className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-all active:scale-[0.98] ${
                         formData.subject === pill
                           ? 'bg-agency-primary text-white border-agency-primary font-semibold shadow-agency-sm'
                           : 'bg-canvas-elevated border-cyber text-gray-300 hover:border-gray-500'
@@ -458,7 +458,7 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-mono text-gray-400 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-gray-300 mb-1.5">
                       Your Name *
                     </label>
                     <input
@@ -472,7 +472,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-gray-400 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-gray-300 mb-1.5">
                       Your Email *
                     </label>
                     <input
@@ -487,7 +487,7 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-gray-400 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-medium text-gray-300 mb-1.5">
                     Subject / Target Role *
                   </label>
                   <input
@@ -502,10 +502,10 @@ export default function ContactSection() {
 
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
-                    <label className="text-xs font-mono text-gray-400 uppercase tracking-wider">
+                    <label className="text-xs font-medium text-gray-300">
                       Message &amp; Role Details *
                     </label>
-                    <span className="text-[11px] font-mono text-gray-500">
+                    <span className="text-xs font-mono text-gray-400">
                       {formData.message.length} characters
                     </span>
                   </div>
@@ -520,24 +520,24 @@ export default function ContactSection() {
                 </div>
 
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="text-[11px] font-mono text-gray-400">
+                  <div className="text-xs text-gray-400">
                     Draft persists across browser reloads • Zero recruiter loss
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-agency-primary hover:bg-agency-primary-hover disabled:opacity-50 text-white font-mono text-xs font-bold tracking-wider transition-all shadow-agency-glow active:scale-95 flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-agency-primary hover:bg-agency-primary-hover disabled:opacity-50 text-white text-xs font-semibold tracking-normal transition-all shadow-agency-glow active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>DISPATCHING INQUIRY...</span>
+                        <span>Sending message...</span>
                       </>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        <span>SEND INQUIRY</span>
+                        <span>Send message</span>
                       </>
                     )}
                   </button>

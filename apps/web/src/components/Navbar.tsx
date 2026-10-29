@@ -126,21 +126,21 @@ export default function Navbar() {
             {/* Command Palette Trigger */}
             <button
               onClick={() => setCmdOpen(true)}
-              className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-400 hover:text-gray-200 text-xs font-mono transition-all group card-specular"
+              className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-400 hover:text-gray-200 text-xs transition-all group card-specular active:scale-[0.98]"
               title="Open Command Palette (⌘K)"
               aria-label="Open command palette"
             >
               <Search className="w-3.5 h-3.5 group-hover:text-agency-primary transition-colors" />
-              <span>Quick Actions</span>
-              <kbd className="px-1.5 py-0.5 rounded bg-canvas-elevated border border-cyber text-[10px] text-gray-400 font-sans">
+              <span>Quick actions</span>
+              <kbd className="px-1.5 py-0.5 rounded bg-canvas-elevated border border-cyber text-[10px] text-gray-400 font-mono">
                 ⌘K
               </kbd>
             </button>
 
             {/* Availability Pill */}
-            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-agency-emerald/10 border border-agency-emerald/30 text-[11px] font-mono text-agency-emerald font-medium">
+            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-agency-emerald/10 border border-agency-emerald/30 text-xs text-agency-emerald font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-agency-emerald pulsing-dot" />
-              <span className="tracking-wide">OPEN FOR HIRE</span>
+              <span>Available for hire</span>
             </div>
 
             {/* Download CV Action */}
@@ -148,18 +148,18 @@ export default function Navbar() {
               href="/Natnael_Getachew_Software_CV.pdf"
               download="Natnael_Getachew_Software_CV.pdf"
               aria-label="Download Natnael Getachew Software Engineering CV PDF"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-semibold tracking-wide transition-all shadow-agency-sm active:scale-95"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-semibold tracking-normal transition-all shadow-agency-sm active:scale-[0.98]"
               title="Download verified resume / CV"
             >
               <Download className="w-3.5 h-3.5" />
-              <span className="hidden xs:inline">RESUME</span>
+              <span className="hidden xs:inline">Resume</span>
               <span className="xs:hidden">CV</span>
             </a>
 
             {/* Light/Dark Theme Switcher */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-300 hover:text-white transition-all flex items-center justify-center active:scale-95 card-specular"
+              className="p-2 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-300 hover:text-white transition-all flex items-center justify-center active:scale-[0.98] card-specular"
               title={mounted && theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
               aria-label="Toggle Theme"
             >
@@ -173,7 +173,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-xl bg-canvas-card border border-cyber text-gray-300 hover:text-white transition-colors"
+              className="md:hidden p-2 rounded-xl bg-canvas-card border border-cyber text-gray-300 hover:text-white transition-colors active:scale-[0.98]"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -226,10 +226,10 @@ export default function Navbar() {
               <a
                 href="/Natnael_Getachew_Software_CV.pdf"
                 download="Natnael_Getachew_Software_CV.pdf"
-                className="w-full py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-bold flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-semibold flex items-center justify-center gap-2 active:scale-[0.98]"
               >
                 <Download className="w-4 h-4" />
-                <span>DOWNLOAD RESUME / CV</span>
+                <span>Download resume (PDF)</span>
               </a>
             </div>
           </div>

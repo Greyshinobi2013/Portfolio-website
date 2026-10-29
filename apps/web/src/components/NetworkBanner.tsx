@@ -24,8 +24,8 @@ export default function NetworkBanner() {
     >
       <div className="max-w-7xl mx-auto w-full flex items-center justify-center gap-2.5">
         <WifiOff className="w-4 h-4 shrink-0 text-rose-400 animate-pulse" />
-        <span>
-          <strong className="font-bold">OFFLINE MODE:</strong> Network disconnected. Local drafts and cached portfolio content remain safely preserved.
+        <span className="font-sans text-xs">
+          <strong className="font-semibold">Offline Mode:</strong> Network disconnected. Local drafts and cached portfolio content remain safely preserved.
         </span>
       </div>
     </aside>

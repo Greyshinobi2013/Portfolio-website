@@ -182,24 +182,24 @@ export default function CaseStudies() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-agency-primary/10 border border-agency-primary/20 text-agency-primary text-xs font-mono font-medium">
+            <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-agency-primary/10 border border-agency-primary/20 text-agency-primary text-xs font-medium">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>SELECTED WORK &amp; CASE STUDIES</span>
+              <span>Selected work &amp; case studies</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-[-0.025em]">
               Featured Engineering Case Studies
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl">
               Real-world systems constructed with modern architecture: full-stack Next.js App Router,
               TeleBirr payment gateways, modular React SPAs, and native Android applications.
             </p>
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-canvas-card border border-cyber text-xs font-mono card-specular">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-canvas-card border border-cyber text-xs card-specular">
             <button
               onClick={() => setActiveFilter('all')}
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                 activeFilter === 'all'
                   ? 'bg-agency-primary text-white font-semibold'
                   : 'text-gray-400 hover:text-white'
@@ -209,7 +209,7 @@ export default function CaseStudies() {
             </button>
             <button
               onClick={() => setActiveFilter('fullstack')}
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                 activeFilter === 'fullstack'
                   ? 'bg-agency-primary text-white font-semibold'
                   : 'text-gray-400 hover:text-white'
@@ -219,7 +219,7 @@ export default function CaseStudies() {
             </button>
             <button
               onClick={() => setActiveFilter('frontend')}
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                 activeFilter === 'frontend'
                   ? 'bg-agency-primary text-white font-semibold'
                   : 'text-gray-400 hover:text-white'
@@ -229,7 +229,7 @@ export default function CaseStudies() {
             </button>
             <button
               onClick={() => setActiveFilter('mobile')}
-              className={`px-3 py-1.5 rounded-lg transition-colors ${
+              className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                 activeFilter === 'mobile'
                   ? 'bg-agency-primary text-white font-semibold'
                   : 'text-gray-400 hover:text-white'
@@ -248,12 +248,12 @@ export default function CaseStudies() {
             {/* Top Badge Strip */}
             <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-agency-primary/15 border border-agency-primary/30 text-agency-primary">
-                  FLAGSHIP FULL-STACK SYSTEM
+                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-agency-primary/15 border border-agency-primary/30 text-agency-primary">
+                  Flagship full-stack system
                 </span>
-                <span className="text-[11px] font-mono font-medium px-3 py-1 rounded-full bg-agency-emerald/10 border border-agency-emerald/30 text-agency-emerald flex items-center gap-1.5">
+                <span className="text-xs font-medium px-3 py-1 rounded-full bg-agency-emerald/10 border border-agency-emerald/30 text-agency-emerald flex items-center gap-1.5">
                   <CheckCircle className="w-3.5 h-3.5" />
-                  <span>QA: 100% PASSING TEST SUITE</span>
+                  <span>QA: 100% passing test suite</span>
                 </span>
                 <span className="text-xs font-mono text-gray-400 hidden sm:inline">
                   Next.js App Router • TeleBirr Ingress • Zustand
@@ -264,9 +264,9 @@ export default function CaseStudies() {
                 href="https://github.com/Greyshinobi2013"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-mono text-xs text-agency-primary hover:text-white transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs text-agency-primary hover:text-white transition-colors font-medium active:scale-[0.98]"
               >
-                <span>SOURCE REPOSITORY</span>
+                <span>Source repository</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -377,16 +377,16 @@ export default function CaseStudies() {
             {/* INTERACTIVE CASE STUDY THEATER TABS */}
             <div className="mt-8 pt-6 border-t border-cyber space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2 font-mono text-xs text-agency-cyan font-bold">
+                <div className="flex items-center gap-2 text-xs text-agency-cyan font-semibold">
                   <Cpu className="w-4 h-4 text-agency-primary" />
-                  <span>INTERACTIVE ENGINEERING &amp; PRODUCT INSPECTOR</span>
+                  <span>Interactive Engineering &amp; Product Inspector</span>
                 </div>
 
                 {/* Tab Controls */}
-                <div className="flex flex-wrap gap-1.5 p-1 rounded-xl bg-canvas-elevated border border-cyber text-xs font-mono card-specular">
+                <div className="flex flex-wrap gap-1.5 p-1 rounded-xl bg-canvas-elevated border border-cyber text-xs card-specular">
                   <button
                     onClick={() => setActiveTabFlagship('preview')}
-                    className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+                    className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] flex items-center gap-1.5 ${
                       activeTabFlagship === 'preview'
                         ? 'bg-agency-primary text-white font-semibold'
                         : 'text-gray-300 hover:text-white'
@@ -398,7 +398,7 @@ export default function CaseStudies() {
 
                   <button
                     onClick={() => setActiveTabFlagship('simulator')}
-                    className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+                    className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] flex items-center gap-1.5 ${
                       activeTabFlagship === 'simulator'
                         ? 'bg-agency-cyan text-white font-semibold'
                         : 'text-agency-cyan hover:text-white'
@@ -410,7 +410,7 @@ export default function CaseStudies() {
 
                   <button
                     onClick={() => setActiveTabFlagship('qa')}
-                    className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 ${
+                    className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] flex items-center gap-1.5 ${
                       activeTabFlagship === 'qa'
                         ? 'bg-agency-emerald text-white font-semibold'
                         : 'text-agency-emerald hover:text-white'
@@ -422,7 +422,7 @@ export default function CaseStudies() {
 
                   <button
                     onClick={() => setActiveTabFlagship('overview')}
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                       activeTabFlagship === 'overview'
                         ? 'bg-agency-primary text-white font-semibold'
                         : 'text-gray-400 hover:text-white'
@@ -433,7 +433,7 @@ export default function CaseStudies() {
 
                   <button
                     onClick={() => setActiveTabFlagship('schema')}
-                    className={`px-3 py-1.5 rounded-lg transition-colors ${
+                    className={`px-3 py-1.5 rounded-lg transition-all active:scale-[0.98] ${
                       activeTabFlagship === 'schema'
                         ? 'bg-agency-primary text-white font-semibold'
                         : 'text-gray-400 hover:text-white'
@@ -449,28 +449,28 @@ export default function CaseStudies() {
                 {/* 1. Live UI Product Mockup Frame */}
                 {activeTabFlagship === 'preview' && (
                   <div className="space-y-4 animate-fade-in">
-                    <div className="flex items-center justify-between text-xs font-mono text-gray-400 pb-2 border-b border-cyber">
+                    <div className="flex items-center justify-between text-xs text-gray-400 pb-2 border-b border-cyber">
                       <div className="flex items-center gap-2 text-white font-semibold">
                         <ShoppingBag className="w-4 h-4 text-agency-primary" />
                         <span>Interactive Product Frame • Addis Eats Food Ordering App</span>
                       </div>
-                      <span className="text-[11px] text-agency-emerald">Interactive Preview</span>
+                      <span className="text-xs text-agency-emerald font-medium">Interactive Preview</span>
                     </div>
 
                     {/* Mac Browser Mockup Frame */}
                     <div className="rounded-2xl border border-cyber bg-canvas-card overflow-hidden shadow-2xl card-specular">
                       {/* Browser Chrome Header */}
-                      <div className="px-4 py-3 bg-canvas-elevated border-b border-cyber flex items-center justify-between gap-3 text-xs font-mono">
+                      <div className="px-4 py-3 bg-canvas-elevated border-b border-cyber flex items-center justify-between gap-3 text-xs">
                         <div className="flex items-center gap-1.5">
                           <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                           <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                         </div>
-                        <div className="flex-1 max-w-sm mx-auto px-3 py-1 rounded-lg bg-canvas border border-cyber flex items-center justify-center gap-2 text-[11px] text-gray-400">
+                        <div className="flex-1 max-w-sm mx-auto px-3 py-1 rounded-lg bg-canvas border border-cyber flex items-center justify-center gap-2 text-xs font-mono text-gray-400">
                           <Lock className="w-3 h-3 text-agency-emerald" />
                           <span>https://addis-eats.vercel.app/order</span>
                         </div>
-                        <div className="text-[10px] text-gray-400">Next.js 16 + TeleBirr</div>
+                        <div className="text-xs text-gray-400">Next.js 16 + TeleBirr</div>
                       </div>
 
                       {/* Mockup Body Content */}
@@ -483,22 +483,22 @@ export default function CaseStudies() {
                             </div>
                             <div>
                               <span className="font-extrabold text-white text-sm">Addis Eats</span>
-                              <span className="text-[10px] text-gray-400 block">Deliver to: Bole, Addis Ababa</span>
+                              <span className="text-xs text-gray-400 block">Deliver to: Bole, Addis Ababa</span>
                             </div>
                           </div>
 
                           <div className="flex items-center gap-2">
-                            <span className="px-2.5 py-1 rounded-full bg-agency-primary/15 border border-agency-primary/30 text-agency-primary text-xs font-mono font-semibold">
+                            <span className="px-2.5 py-1 rounded-full bg-agency-primary/15 border border-agency-primary/30 text-agency-primary text-xs font-semibold">
                               🛒 Cart: 2 Items (440 ETB)
                             </span>
                           </div>
                         </div>
 
                         {/* Guaranteed Delivery Notice Banner */}
-                        <div className="p-3 rounded-xl bg-agency-cyan/10 border border-agency-cyan/25 flex items-center gap-2.5 text-xs text-agency-cyan font-mono">
+                        <div className="p-3 rounded-xl bg-agency-cyan/10 border border-agency-cyan/25 flex items-center gap-2.5 text-xs text-agency-cyan">
                           <Clock className="w-4 h-4 shrink-0" />
                           <span>
-                            <strong>30-Min Guarantee:</strong> If driver ETA exceeds 30m, 20% discount voucher (<code className="text-white font-bold">ADDISLATE20</code>) auto-injects!
+                            <strong>30-Min Guarantee:</strong> If driver ETA exceeds 30m, 20% discount voucher (<code className="text-white font-bold font-mono">ADDISLATE20</code>) auto-injects!
                           </span>
                         </div>
 
@@ -507,20 +507,20 @@ export default function CaseStudies() {
                           {/* Meal 1 */}
                           <div className="p-4 rounded-xl bg-canvas border border-cyber space-y-3 relative">
                             <div className="flex justify-between items-start">
-                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-agency-primary/10 text-agency-primary border border-agency-primary/20">
-                                POPULAR
+                              <span className="text-xs font-semibold px-2 py-0.5 rounded bg-agency-primary/10 text-agency-primary border border-agency-primary/20">
+                                Popular
                               </span>
                               <span className="font-mono text-xs font-bold text-white">280 ETB</span>
                             </div>
                             <div>
                               <h5 className="font-bold text-white text-sm">Special Doro Wat</h5>
-                              <p className="text-[11px] text-gray-400 mt-1 leading-snug">
+                              <p className="text-xs text-gray-400 mt-1 leading-snug">
                                 Slow-simmered chicken leg in berbere with hard-boiled egg &amp; teff injera.
                               </p>
                             </div>
-                            <div className="flex items-center justify-between pt-2 border-t border-cyber/50 text-[11px] font-mono">
+                            <div className="flex items-center justify-between pt-2 border-t border-cyber/50 text-xs font-mono">
                               <span className="text-agency-emerald">Stock: 3 left</span>
-                              <button className="px-2 py-1 rounded bg-agency-primary text-white font-bold text-[10px]">
+                              <button className="px-2 py-1 rounded bg-agency-primary text-white font-semibold text-xs active:scale-[0.98]">
                                 In Cart (1)
                               </button>
                             </div>
@@ -529,20 +529,20 @@ export default function CaseStudies() {
                           {/* Meal 2 */}
                           <div className="p-4 rounded-xl bg-canvas border border-cyber space-y-3 relative">
                             <div className="flex justify-between items-start">
-                              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-agency-emerald/10 text-agency-emerald border border-agency-emerald/20">
-                                FAST PREP
+                              <span className="text-xs font-semibold px-2 py-0.5 rounded bg-agency-emerald/10 text-agency-emerald border border-agency-emerald/20">
+                                Fast Prep
                               </span>
                               <span className="font-mono text-xs font-bold text-white">160 ETB</span>
                             </div>
                             <div>
                               <h5 className="font-bold text-white text-sm">Shiro Tegabino</h5>
-                              <p className="text-[11px] text-gray-400 mt-1 leading-snug">
+                              <p className="text-xs text-gray-400 mt-1 leading-snug">
                                 Sizzling seasoned chickpea claypot prepared with spiced clarified butter.
                               </p>
                             </div>
-                            <div className="flex items-center justify-between pt-2 border-t border-cyber/50 text-[11px] font-mono">
+                            <div className="flex items-center justify-between pt-2 border-t border-cyber/50 text-xs font-mono">
                               <span className="text-agency-emerald">Stock: 8 left</span>
-                              <button className="px-2 py-1 rounded bg-agency-primary text-white font-bold text-[10px]">
+                              <button className="px-2 py-1 rounded bg-agency-primary text-white font-semibold text-xs active:scale-[0.98]">
                                 In Cart (1)
                               </button>
                             </div>
@@ -552,23 +552,23 @@ export default function CaseStudies() {
                           <div className="p-4 rounded-xl bg-canvas border border-cyber space-y-3 relative overflow-hidden">
                             {/* Frosted out-of-stock overlay */}
                             <div className="absolute inset-0 bg-black/75 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center text-center p-2">
-                              <span className="text-xs font-mono font-bold text-agency-rose uppercase px-2 py-1 rounded bg-agency-rose/15 border border-agency-rose/30">
-                                SOLD OUT
+                              <span className="text-xs font-semibold text-agency-rose px-2.5 py-1 rounded bg-agency-rose/15 border border-agency-rose/30">
+                                Sold Out
                               </span>
-                              <span className="text-[10px] font-mono text-gray-300 mt-1">
+                              <span className="text-xs text-gray-300 mt-1">
                                 Frosted inventory ceiling triggered
                               </span>
                             </div>
 
                             <div className="flex justify-between items-start opacity-40">
-                              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-gray-700 text-gray-400">
-                                CLASSIC
+                              <span className="text-xs px-2 py-0.5 rounded bg-gray-700 text-gray-400">
+                                Classic
                               </span>
                               <span className="font-mono text-xs text-gray-400">240 ETB</span>
                             </div>
                             <div className="opacity-40">
                               <h5 className="font-bold text-white text-sm">Tibs Firfir Special</h5>
-                              <p className="text-[11px] text-gray-400 mt-1 leading-snug">
+                              <p className="text-xs text-gray-400 mt-1 leading-snug">
                                 Sautéed prime beef cubes infused in berbere gravy with torn injera.
                               </p>
                             </div>
@@ -576,16 +576,16 @@ export default function CaseStudies() {
                         </div>
 
                         {/* Order Checkout Bar */}
-                        <div className="p-4 rounded-xl bg-canvas-elevated border border-cyber flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-xs">
+                        <div className="p-4 rounded-xl bg-canvas-elevated border border-cyber flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
                           <div>
-                            <span className="text-gray-400 block text-[11px]">Subtotal (440 ETB) + Bole Delivery (120 ETB):</span>
-                            <span className="text-base font-extrabold text-white">560.00 ETB Total</span>
+                            <span className="text-gray-400 block text-xs">Subtotal (440 ETB) + Bole Delivery (120 ETB):</span>
+                            <span className="text-base font-extrabold text-white font-mono">560.00 ETB Total</span>
                           </div>
 
                           <div className="flex items-center gap-2 w-full sm:w-auto">
                             <button
                               onClick={() => setActiveTabFlagship('simulator')}
-                              className="w-full sm:w-auto px-4 py-2 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white font-bold flex items-center justify-center gap-1.5 transition-all shadow-agency-sm"
+                              className="w-full sm:w-auto px-4 py-2 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white font-semibold flex items-center justify-center gap-1.5 transition-all shadow-agency-sm active:scale-[0.98]"
                             >
                               <SmartphoneNfc className="w-3.5 h-3.5" />
                               <span>Proceed with TeleBirr Payment</span>
@@ -717,17 +717,17 @@ export default function CaseStudies() {
                         <button
                           onClick={handleSimulatePayment}
                           disabled={!isValidEthiopianPhone(phone) || simulating}
-                          className="w-full py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover disabled:opacity-50 text-white font-mono text-xs font-bold transition-all shadow-agency-sm flex items-center justify-center gap-2"
+                          className="w-full py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover disabled:opacity-50 text-white text-xs font-semibold transition-all shadow-agency-sm flex items-center justify-center gap-2 active:scale-[0.98]"
                         >
                           {simulating ? (
                             <>
                               <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                              <span>DISPATCHING USSD PUSH VIA TELEBIRR...</span>
+                              <span>Dispatching USSD push via TeleBirr...</span>
                             </>
                           ) : (
                             <>
                               <Play className="w-3.5 h-3.5" />
-                              <span>DISPATCH SIMULATED TELEBIRR CHECKOUT</span>
+                              <span>Dispatch simulated TeleBirr checkout</span>
                             </>
                           )}
                         </button>
@@ -735,21 +735,21 @@ export default function CaseStudies() {
 
                       {/* Receipt Preview */}
                       <div className="rounded-xl bg-canvas-elevated border border-cyber p-4 font-mono text-xs space-y-3">
-                        <div className="flex items-center justify-between pb-2 border-b border-cyber text-gray-400 text-[11px]">
-                          <span>TRANSACTION TELEMETRY</span>
-                          <span>HTTP 200 INGRESS</span>
+                        <div className="flex items-center justify-between pb-2 border-b border-cyber text-gray-400 text-xs font-sans">
+                          <span className="font-medium">Transaction telemetry</span>
+                          <span className="text-agency-emerald font-mono">HTTP 200 Ingress</span>
                         </div>
 
-                        <div className="space-y-1.5 text-[11px] text-gray-300">
-                          <div className="flex justify-between">
+                        <div className="space-y-1.5 text-xs text-gray-300">
+                          <div className="flex justify-between font-sans">
                             <span>Subtotal (2x Combo Meals):</span>
-                            <span>440.00 ETB</span>
+                            <span className="font-mono">440.00 ETB</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between font-sans">
                             <span>Delivery Fee ({selectedSubCity}):</span>
-                            <span>{getSubCityFee(selectedSubCity)}.00 ETB</span>
+                            <span className="font-mono">{getSubCityFee(selectedSubCity)}.00 ETB</span>
                           </div>
-                          <div className="flex justify-between font-bold text-white pt-2 border-t border-cyber/50">
+                          <div className="flex justify-between font-bold text-white pt-2 border-t border-cyber/50 font-sans">
                             <span>Total Payable:</span>
                             <span className="text-agency-emerald font-mono">
                               {440 + getSubCityFee(selectedSubCity)}.00 ETB
@@ -758,14 +758,14 @@ export default function CaseStudies() {
                         </div>
 
                         {simResult && (
-                          <div className="mt-3 p-3 rounded-lg bg-agency-emerald/10 border border-agency-emerald/30 text-agency-emerald space-y-1 animate-fade-in text-[11px]">
+                          <div className="mt-3 p-3 rounded-lg bg-agency-emerald/10 border border-agency-emerald/30 text-agency-emerald space-y-1 animate-fade-in text-xs font-sans">
                             <div className="font-bold flex items-center gap-1.5">
                               <CheckCircle className="w-3.5 h-3.5" />
-                              <span>TELEBIRR AUTHORIZATION CONFIRMED</span>
+                              <span>TeleBirr authorization confirmed</span>
                             </div>
                             <div>Transaction Hash: <strong className="text-white font-mono">{simResult.txId}</strong></div>
                             <div className="text-gray-300">{simResult.message}</div>
-                            <div className="text-[10px] text-agency-cyan font-semibold pt-1">
+                            <div className="text-xs text-agency-cyan font-medium pt-1">
                               • 30-minute delivery countdown active. Delay escalation voucher ready.
                             </div>
                           </div>
@@ -791,60 +791,70 @@ export default function CaseStudies() {
                       <button
                         onClick={runAllQATests}
                         disabled={isRunningQA}
-                        className="px-3.5 py-1.5 rounded-xl bg-agency-emerald hover:bg-agency-emerald/90 text-white font-mono text-xs font-bold transition-all flex items-center gap-1.5 disabled:opacity-50"
+                        className="px-3.5 py-1.5 rounded-xl bg-agency-emerald hover:bg-agency-emerald/90 text-white text-xs font-semibold transition-all flex items-center gap-1.5 disabled:opacity-50 active:scale-[0.98]"
                       >
                         {isRunningQA ? (
                           <>
                             <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            <span>RUNNING SUITE...</span>
+                            <span>Running suite...</span>
                           </>
                         ) : (
                           <>
                             <Play className="w-3.5 h-3.5" />
-                            <span>RUN QA SUITE</span>
+                            <span>Run QA test suite</span>
                           </>
                         )}
                       </button>
+                    </div>
+
+                    {/* Animated Progress Bar */}
+                    <div className="w-full bg-canvas rounded-full h-1.5 overflow-hidden border border-cyber">
+                      <div
+                        className="bg-agency-emerald h-full transition-all duration-300 ease-out"
+                        style={{
+                          width: `${(tests.filter((t) => t.status === 'passed').length / tests.length) * 100}%`,
+                        }}
+                      />
                     </div>
 
                     {/* Test Table */}
                     <div className="rounded-xl border border-cyber overflow-hidden bg-canvas-elevated">
                       <table className="w-full text-xs font-mono text-left">
                         <thead>
-                          <tr className="bg-canvas border-b border-cyber text-gray-400 text-[10px] uppercase">
-                            <th className="p-3 font-semibold">Test Specification</th>
-                            <th className="p-3 font-semibold hidden sm:table-cell">Category</th>
-                            <th className="p-3 font-semibold hidden md:table-cell">Assertion Detail</th>
-                            <th className="p-3 font-semibold text-right">Result</th>
+                          <tr className="bg-canvas border-b border-cyber text-gray-400 text-xs">
+                            <th className="p-3 font-semibold font-sans">Test Specification</th>
+                            <th className="p-3 font-semibold hidden sm:table-cell font-sans">Category</th>
+                            <th className="p-3 font-semibold hidden md:table-cell font-sans">Assertion Detail</th>
+                            <th className="p-3 font-semibold text-right font-sans">Result</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-cyber/40 text-gray-300">
                           {tests.map((t) => (
                             <tr key={t.id} className="hover:bg-canvas-card/60 transition-colors">
-                              <td className="p-3 font-semibold text-white">
+                              <td className="p-3 font-semibold text-white font-sans">
                                 {t.name}
                               </td>
-                              <td className="p-3 text-agency-cyan text-[11px] hidden sm:table-cell">
+                              <td className="p-3 text-agency-cyan text-xs hidden sm:table-cell font-sans">
                                 {t.category}
                               </td>
-                              <td className="p-3 text-gray-400 text-[11px] hidden md:table-cell">
+                              <td className="p-3 text-gray-400 text-xs hidden md:table-cell font-sans">
                                 {t.target}
                               </td>
                               <td className="p-3 text-right">
                                 {t.status === 'running' && (
-                                  <span className="inline-flex items-center gap-1 text-agency-amber text-[11px]">
+                                  <span className="inline-flex items-center gap-1 text-agency-amber text-xs font-sans">
                                     <div className="w-2.5 h-2.5 border-2 border-agency-amber/30 border-t-agency-amber rounded-full animate-spin" />
                                     <span>Running...</span>
                                   </span>
                                 )}
                                 {t.status === 'passed' && (
-                                  <span className="inline-flex items-center gap-1 text-agency-emerald font-bold text-[11px]">
+                                  <span className="inline-flex items-center gap-1 text-agency-emerald font-semibold text-xs font-mono">
                                     <Check className="w-3.5 h-3.5" />
-                                    <span>PASS ({t.durationMs}ms)</span>
+                                    <span>Pass ({t.durationMs}ms)</span>
                                   </span>
                                 )}
                                 {t.status === 'idle' && (
-                                  <span className="text-gray-500 text-[11px]">QUEUED</span>
+                                  <span className="text-gray-500 text-xs font-sans">Queued</span>
                                 )}
                               </td>
                             </tr>
@@ -853,12 +863,12 @@ export default function CaseStudies() {
                       </table>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-canvas-elevated/80 border border-cyber flex items-center justify-between text-xs font-mono">
+                    <div className="p-3 rounded-xl bg-canvas-elevated/80 border border-cyber flex items-center justify-between text-xs font-sans">
                       <span className="text-agency-emerald font-semibold flex items-center gap-1.5">
                         <CheckCircle className="w-4 h-4" />
-                        <span>Coverage: 5/5 Passing Tests • 0 Regressions</span>
+                        <span>Coverage: {tests.filter((t) => t.status === 'passed').length}/5 Passing Tests • 0 Regressions</span>
                       </span>
-                      <span className="text-gray-400">Execution Framework: Jest &amp; Boundary Assertions</span>
+                      <span className="text-gray-400 text-xs">Framework: Jest &amp; Boundary Assertions</span>
                     </div>
                   </div>
                 )}
@@ -866,9 +876,9 @@ export default function CaseStudies() {
                 {/* 5. Prisma Schema */}
                 {activeTabFlagship === 'schema' && (
                   <div className="space-y-3 font-mono text-xs animate-fade-in">
-                    <div className="flex items-center justify-between text-gray-400 text-[11px]">
+                    <div className="flex items-center justify-between text-gray-400 text-xs">
                       <span>prisma/schema.prisma</span>
-                      <span className="text-agency-primary">POSTGRESQL DATA CONTRACT</span>
+                      <span className="text-agency-primary font-medium">PostgreSQL Data Contract</span>
                     </div>
                     <pre className="p-4 rounded-xl bg-canvas-elevated border border-cyber text-gray-300 text-[11px] leading-relaxed overflow-x-auto">
 {`model Order {
@@ -903,10 +913,10 @@ export default function CaseStudies() {
             <div className="rounded-2xl bg-canvas-card border border-cyber p-6 sm:p-7 flex flex-col justify-between shadow-agency-card card-specular group transition-all duration-300 hover:border-agency-primary/40">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold px-2.5 py-1 rounded-full bg-agency-cyan/10 border border-agency-cyan/30 text-agency-cyan">
-                    MODULAR SPA • AUG 2026
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-agency-cyan/10 border border-agency-cyan/30 text-agency-cyan">
+                    Modular SPA • Aug 2026
                   </span>
-                  <span className="font-mono text-xs text-gray-400">React 18 • Vite • Zustand</span>
+                  <span className="text-xs text-gray-400 font-mono">React 18 • Vite • Zustand</span>
                 </div>
 
                 <h3 className="text-xl font-extrabold text-white tracking-tight group-hover:text-agency-cyan transition-colors">
@@ -927,7 +937,7 @@ export default function CaseStudies() {
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                       <span className="ml-2 text-gray-400 text-[10px]">store/useCartStore.ts</span>
                     </div>
-                    <span className="text-gray-400 text-[10px]">ZUSTAND PERSIST</span>
+                    <span className="text-gray-400 text-[10px] font-sans font-medium">Zustand Persist</span>
                   </div>
 
                   <pre className="p-3.5 text-gray-300 overflow-x-auto leading-relaxed">
@@ -944,21 +954,21 @@ export default function CaseStudies() {
                   </pre>
                 </div>
 
-                <div className="space-y-2 text-xs text-gray-300 pt-1">
+                <div className="space-y-2 text-xs text-gray-300 pt-1 font-sans">
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-cyan font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-cyan font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Persist State Hydration:</strong> Zero state loss across browser reloads or temporary network drops.
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-cyan font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-cyan font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Real-Time Stock Decrement:</strong> Automated frosted overlay on exhausted menu items.
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-cyan font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-cyan font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Sales Telemetry:</strong> Integrated Recharts for visual sales analytics.
                     </div>
@@ -969,7 +979,7 @@ export default function CaseStudies() {
               <div className="pt-6 mt-6 border-t border-cyber flex items-center justify-between">
                 <div className="flex flex-wrap gap-1.5">
                   {['React 18', 'Vite', 'Zustand', 'Recharts'].map((t, idx) => (
-                    <span key={idx} className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
+                    <span key={idx} className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-xs font-mono text-gray-300">
                       {t}
                     </span>
                   ))}
@@ -978,7 +988,7 @@ export default function CaseStudies() {
                   href="https://github.com/Greyshinobi2013"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-mono text-xs text-agency-cyan hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1 text-xs text-agency-cyan hover:text-white transition-colors active:scale-[0.98] font-medium"
                 >
                   <span>Repository</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -992,10 +1002,10 @@ export default function CaseStudies() {
             <div className="rounded-2xl bg-canvas-card border border-cyber p-6 sm:p-7 flex flex-col justify-between shadow-agency-card card-specular group transition-all duration-300 hover:border-agency-primary/40">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold px-2.5 py-1 rounded-full bg-agency-amber/10 border border-agency-amber/30 text-agency-amber">
-                    PURE ES6+ • JUL 2026
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-agency-amber/10 border border-agency-amber/30 text-agency-amber">
+                    Pure ES6+ • Jul 2026
                   </span>
-                  <span className="font-mono text-xs text-gray-400">HTML5 • CSS3 • LocalStorage</span>
+                  <span className="text-xs text-gray-400 font-mono">HTML5 • CSS3 • LocalStorage</span>
                 </div>
 
                 <h3 className="text-xl font-extrabold text-white tracking-tight group-hover:text-agency-amber transition-colors">
@@ -1016,7 +1026,7 @@ export default function CaseStudies() {
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                       <span className="ml-2 text-gray-400 text-[10px]">auth/sessionGuard.js</span>
                     </div>
-                    <span className="text-gray-400 text-[10px]">PURE JS AUTH GUARD</span>
+                    <span className="text-gray-400 text-[10px] font-sans font-medium">Pure JS Auth Guard</span>
                   </div>
 
                   <pre className="p-3.5 text-gray-300 overflow-x-auto leading-relaxed">
@@ -1029,21 +1039,21 @@ export default function CaseStudies() {
                   </pre>
                 </div>
 
-                <div className="space-y-2 text-xs text-gray-300 pt-1">
+                <div className="space-y-2 text-xs text-gray-300 pt-1 font-sans">
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-amber font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-amber font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Zero External Dependencies:</strong> Lightweight pure JS client cart calculations and live filtering.
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-amber font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-amber font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Session Guard Security:</strong> Token verification with SessionStorage persistence.
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <span className="text-agency-amber font-mono font-bold mt-0.5">✔</span>
+                    <span className="text-agency-amber font-bold mt-0.5">✔</span>
                     <div>
                       <strong className="text-white">Regression Testing:</strong> Verified route redirect integrity across positive and negative scenarios.
                     </div>
@@ -1054,7 +1064,7 @@ export default function CaseStudies() {
               <div className="pt-6 mt-6 border-t border-cyber flex items-center justify-between">
                 <div className="flex flex-wrap gap-1.5">
                   {['HTML5', 'CSS3', 'JavaScript ES6+', 'SessionStorage'].map((t, idx) => (
-                    <span key={idx} className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
+                    <span key={idx} className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-xs font-mono text-gray-300">
                       {t}
                     </span>
                   ))}
@@ -1063,7 +1073,7 @@ export default function CaseStudies() {
                   href="https://github.com/Greyshinobi2013"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-mono text-xs text-agency-amber hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1 text-xs text-agency-amber hover:text-white transition-colors active:scale-[0.98] font-medium"
                 >
                   <span>Repository</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -1081,10 +1091,10 @@ export default function CaseStudies() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-[10px] font-bold px-2.5 py-1 rounded-full bg-agency-rose/10 border border-agency-rose/30 text-agency-rose">
-                    NATIVE MOBILE APPRENTICESHIP
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-agency-rose/10 border border-agency-rose/30 text-agency-rose">
+                    Native Mobile Apprenticeship
                   </span>
-                  <span className="font-mono text-xs text-gray-400">
+                  <span className="text-xs text-gray-400">
                     M.A.D Technologies • Addis Ababa, Ethiopia (2022 — 2023)
                   </span>
                 </div>
@@ -1093,7 +1103,7 @@ export default function CaseStudies() {
                   Native Android Developer Apprenticeship &amp; Dictionary Utility
                 </h3>
 
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-2xl">
                   Collaborated on commercial native Android applications, translating Figma wireframes into responsive
                   Material Design layouts using RecyclerView, Java, and Kotlin. Built a standalone Dictionary mobile app
                   with dynamic SearchView querying and local SQLite database caching.
@@ -1108,12 +1118,12 @@ export default function CaseStudies() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 p-4 rounded-xl bg-canvas-elevated border border-cyber space-y-2 text-xs font-mono">
+              <div className="lg:col-span-4 p-4 rounded-xl bg-canvas-elevated border border-cyber space-y-2 text-xs">
                 <div className="text-agency-rose font-bold flex items-center gap-1.5">
                   <Smartphone className="w-4 h-4" />
                   <span>Key Engineering Deliverables</span>
                 </div>
-                <ul className="space-y-1.5 text-gray-300 text-[11px] list-disc list-outside pl-4">
+                <ul className="space-y-1.5 text-gray-300 text-xs list-disc list-outside pl-4">
                   <li>Translated Figma wireframes into RecyclerView adapters.</li>
                   <li>Engineered local SQLite caching for instant offline word lookups.</li>
                   <li>Conducted Git feature branch reviews and memory leak debugging.</li>

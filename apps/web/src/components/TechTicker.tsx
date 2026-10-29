@@ -36,11 +36,11 @@ export default function TechTicker() {
           {TECH_ITEMS.concat(TECH_ITEMS).map((item, idx) => (
             <div
               key={idx}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas-elevated/70 border border-cyber text-xs font-mono text-gray-300 hover:border-gray-500 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-canvas-elevated/70 border border-cyber text-xs text-gray-300 hover:border-gray-500 transition-colors whitespace-nowrap"
             >
               <span className={`w-1.5 h-1.5 rounded-full ${item.dotColor}`} />
               <span className="font-semibold text-white">{item.name}</span>
-              <span className="text-[10px] text-gray-400 uppercase tracking-wider">
+              <span className="text-[11px] text-gray-400 font-sans">
                 • {item.category}
               </span>
             </div>

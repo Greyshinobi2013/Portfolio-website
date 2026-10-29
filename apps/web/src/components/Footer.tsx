@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Column 2: Sitemap */}
           <div className="md:col-span-3 space-y-2.5">
-            <div className="text-[11px] font-bold text-gray-300 uppercase tracking-wider">
+            <div className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
               Navigation
             </div>
             <ul className="space-y-1.5 text-gray-400">
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Column 3: Telemetry & Ingress */}
           <div className="md:col-span-4 space-y-2.5">
-            <div className="text-[11px] font-bold text-gray-300 uppercase tracking-wider">
+            <div className="text-xs font-semibold text-gray-300 uppercase tracking-wide">
               System Telemetry &amp; Ingress
             </div>
             <ul className="space-y-1.5 text-gray-400">
@@ -116,24 +116,24 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Back to Top */}
-        <div className="pt-6 border-t border-cyber flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500 text-[11px]">
+        <div className="pt-6 border-t border-cyber flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500 text-xs">
           <div className="flex flex-wrap items-center gap-2">
-            <span>© 2026 NATNAEL GETACHEW.</span>
+            <span>© 2026 Natnael Getachew</span>
             <span>•</span>
-            <span>NEXT.JS 16 APP ROUTER</span>
+            <span>Next.js 16 App Router</span>
             <span>•</span>
-            <span>TYPESCRIPT STRICT</span>
+            <span>TypeScript Strict</span>
             <span>•</span>
-            <span>REACT 18</span>
+            <span>React 18</span>
           </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-canvas-elevated hover:bg-canvas text-gray-400 hover:text-white border border-cyber transition-all active:scale-95"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-canvas-elevated hover:bg-canvas text-gray-400 hover:text-white border border-cyber transition-all active:scale-[0.98]"
             title="Scroll to top of page"
             aria-label="Back to top"
           >
-            <span>BACK TO TOP</span>
+            <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5 text-agency-primary" />
           </button>
         </div>

@@ -30,56 +30,49 @@ export default function Hero() {
           {/* Left Column: Editorial Headline & Narrative */}
           <div className="lg:col-span-7 space-y-6">
             {/* Status Beacon Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-agency-primary/10 border border-agency-primary/25 text-agency-primary text-xs font-mono font-medium">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-agency-primary/10 border border-agency-primary/25 text-agency-primary text-xs font-medium">
               <span className="w-2 h-2 rounded-full bg-agency-emerald pulsing-dot" />
-              <span>OPEN FOR SOFTWARE DEVELOPER &amp; QA INTERNSHIPS</span>
+              <span>Available for Software Developer &amp; QA Internships</span>
             </div>
 
             {/* High-Impact Editorial Headline */}
-            <div className="space-y-2">
-              <p className="text-sm sm:text-base font-mono uppercase tracking-wider text-agency-cyan font-semibold">
-                Natnael Getachew Studio
-              </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-white tracking-tight leading-[1.12]">
-                Architecting resilient web systems,{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-agency-primary via-agency-cyan to-agency-emerald">
-                  fintech integrations
-                </span>
-                , and verified digital products.
+            <div className="space-y-3">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-white tracking-[-0.03em] leading-[1.12]">
+                Architecting resilient web systems, fintech payment rails, and verified digital products.
               </h1>
             </div>
 
             {/* Narrative Bio */}
             <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-              BSc in Computer Engineering graduate from <strong className="text-white font-medium">Debre Birhan University</strong>,{' '}
+              Computer Engineering graduate from <strong className="text-white font-medium">Debre Birhan University</strong>,{' '}
               postgraduate <strong className="text-white font-medium">MSc Artificial Intelligence scholar</strong> at Ethiopian Defense University,
-              and IBT College of Canada Software Development &amp; QA graduate. Specializing in Next.js (App Router), React 18,
-              strict TypeScript, Python, and TeleBirr payment gateway engineering.
+              and IBT College of Canada Software Development &amp; QA graduate. Specializing in Next.js App Router,
+              strict TypeScript, Python, and production TeleBirr payment gateway engineering.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="#projects"
-                className="flex items-center gap-2 px-5 py-3 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-agency-glow active:scale-95"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs sm:text-sm font-semibold tracking-normal transition-all shadow-agency-glow active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-agency-primary"
               >
-                <span>EXPLORE CASE STUDIES</span>
+                <span>Explore case studies</span>
                 <ArrowDownRight className="w-4 h-4" />
               </a>
 
               <a
                 href="#contact"
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-canvas-card border border-cyber hover:border-agency-primary text-gray-200 hover:text-white text-xs sm:text-sm font-medium transition-all"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-canvas-card border border-cyber hover:border-agency-primary text-gray-200 hover:text-white text-xs sm:text-sm font-medium transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-agency-primary"
               >
                 <Mail className="w-4 h-4 text-agency-emerald" />
-                <span>Get In Touch</span>
+                <span>Get in touch</span>
               </a>
 
               <a
                 href="https://github.com/Greyshinobi2013"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-300 hover:text-white text-xs sm:text-sm font-mono transition-all"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-300 hover:text-white text-xs sm:text-sm font-medium transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-agency-primary"
               >
                 <Github className="w-4 h-4" />
                 <span>GitHub</span>
