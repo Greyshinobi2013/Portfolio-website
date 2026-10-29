@@ -17,8 +17,10 @@ export const useThemeStore = create<ThemeStore>((set) => ({
         localStorage.setItem('portfolio_theme', nextTheme);
         if (nextTheme === 'dark') {
           document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
         } else {
           document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
         }
       }
       return { theme: nextTheme };
@@ -28,8 +30,10 @@ export const useThemeStore = create<ThemeStore>((set) => ({
       localStorage.setItem('portfolio_theme', theme);
       if (theme === 'dark') {
         document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
       } else {
         document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
       }
     }
     set({ theme });

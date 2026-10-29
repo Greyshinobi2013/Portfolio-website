@@ -1,229 +1,301 @@
 'use client';
 
 import React from 'react';
-import { Briefcase, GraduationCap, Calendar, CheckCircle2 } from 'lucide-react';
+import {
+  Briefcase,
+  GraduationCap,
+  Calendar,
+  CheckCircle2,
+  Download,
+  Languages,
+  Sparkles,
+  MapPin,
+  FileText,
+  ExternalLink,
+} from 'lucide-react';
 
 export default function ExperienceTimeline() {
   return (
-    <section id="experience" className="py-16 md:py-24 bg-canvas border-b border-cyber relative">
+    <section
+      id="experience"
+      className="py-16 md:py-24 bg-canvas border-b border-cyber relative scroll-mt-20 md:scroll-mt-24"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-12">
-          <div className="flex items-center gap-2 mb-2 font-mono text-xs text-neon-pink font-semibold tracking-wider">
-            <span>:: BACKGROUND &amp; EVOLUTION</span>
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full bg-agency-primary/10 border border-agency-primary/20 text-agency-primary text-xs font-mono font-medium">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>BACKGROUND &amp; CREDENTIALS</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-            Journey, Experience &amp; Credentials
+            Journey, Experience &amp; Academic Credentials
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-400 max-w-3xl leading-relaxed">
-            Academic foundation in Computer Engineering merged with high-velocity software apprenticeships and hands-on
-            industry experience.
+          <p className="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed">
+            Rigorous academic foundations in Computer Engineering combined with postgraduate AI research
+            and hands-on software development &amp; QA apprenticeships.
           </p>
         </div>
 
-        {/* Dual-Column Layout: Left (Experience) & Right (Education) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* LEFT: Engineering Experience */}
+        {/* Dual-Column Layout: Left (Industry Experience) & Right (Academic Credentials) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+          {/* =========================================================================
+              LEFT COLUMN: PROFESSIONAL EXPERIENCE
+             ========================================================================= */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2 pb-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-neon-cyan"></span>
-              <h3 className="font-mono text-sm sm:text-base font-bold text-white tracking-wider uppercase">
-                Engineering Experience
+            <div className="flex items-center gap-2 pb-2 border-b border-cyber">
+              <Briefcase className="w-4 h-4 text-agency-primary" />
+              <h3 className="font-mono text-sm font-bold text-white tracking-wider uppercase">
+                Industry Experience &amp; Apprenticeships
               </h3>
             </div>
 
             {/* Experience Card 1: Android Developer Intern */}
-            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3.5 relative group hover:border-agency-primary/40 transition-all duration-300 shadow-agency-card card-specular">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-agency-primary transition-colors">
                   Android Developer Intern
                 </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-emerald/10 border border-neon-emerald/30 text-neon-emerald">
+                <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-agency-emerald/10 border border-agency-emerald/30 text-agency-emerald">
                   2022 — 2023
                 </span>
               </div>
 
-              <div className="text-xs font-mono text-neon-pink font-semibold">
-                M.A.D Technologies • Addis Ababa, Ethiopia
+              <div className="text-xs font-mono text-agency-primary font-semibold flex items-center gap-1.5">
+                <span>M.A.D Technologies</span>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">Addis Ababa, Ethiopia</span>
               </div>
 
-              <ul className="space-y-2 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-neon-cyan">
+              <ul className="space-y-2 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-agency-primary">
                 <li>
-                  Collaborated on native Android apps, translating Figma designs into responsive Material layouts with
-                  RecyclerView.
+                  Collaborated on commercial native Android applications, translating Figma designs into responsive Material layouts with RecyclerView.
                 </li>
                 <li>
-                  Developed standalone Dictionary mobile app with dynamic SearchView queries and local database caching.
+                  Developed standalone Dictionary mobile app with dynamic SearchView queries and local SQLite database caching for offline lookups.
                 </li>
                 <li>
-                  Conducted code reviews, debugged edge cases in memory management, and adhered to Git pull-request flows.
+                  Conducted code reviews, debugged edge cases in memory management, and adhered to Git pull-request workflows.
                 </li>
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  Android Studio
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-emerald">
-                  Java &amp; Kotlin
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  SQLite
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
-                  RecyclerView
-                </span>
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-cyber/50">
+                {['Android Studio', 'Java & Kotlin', 'SQLite', 'RecyclerView', 'Material Design 3'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-md bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Experience Card 2: Languages & Communication */}
-            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
+            {/* Experience Card 2: CodeOps Trainee & Contributor */}
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3.5 relative group hover:border-agency-cyan/40 transition-all duration-300 shadow-agency-card card-specular">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
-                  Languages &amp; Communication
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-agency-cyan transition-colors">
+                  Full-Stack Software Development Trainee
                 </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan">
-                  CV: LANGUAGES
+                <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-agency-cyan/10 border border-agency-cyan/30 text-agency-cyan">
+                  2026
                 </span>
               </div>
 
-              <div className="text-xs font-mono text-neon-pink font-semibold">
-                Professional Working Proficiency
+              <div className="text-xs font-mono text-agency-cyan font-semibold">
+                CodeOps Capstone Engineering • Web &amp; API Systems
               </div>
 
-              <ul className="space-y-2.5 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-neon-cyan">
+              <ul className="space-y-2 text-xs text-gray-300 leading-relaxed list-disc list-outside pl-4 marker:text-agency-cyan">
                 <li>
-                  <strong className="text-white">English:</strong> Professional working proficiency (technical documentation, code reviews, and remote communication).
+                  Architected production portfolio and three iterations of the Addis Eats ordering platform (Next.js 16, React SPA, and ES6+).
                 </li>
                 <li>
-                  <strong className="text-white">Amharic:</strong> Native proficiency.
+                  Integrated TeleBirr fintech API ingress with localized sub-city fee calculation and automated delay escalation pipelines.
+                </li>
+                <li>
+                  Authored comprehensive test plans, boundary value assertions, and network resilience handling with zero data loss.
                 </li>
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-1">
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
-                  English (Professional)
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
-                  Amharic (Native)
-                </span>
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-cyber/50">
+                {['Next.js App Router', 'React 18', 'TypeScript', 'TeleBirr API', 'Zustand', 'Jest QA'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-md bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Languages Card */}
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3 relative group hover:border-agency-emerald/40 transition-all duration-300 shadow-agency-card card-specular">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Languages className="w-4 h-4 text-agency-emerald" />
+                  <h4 className="text-base font-bold text-white group-hover:text-agency-emerald transition-colors">
+                    Communication &amp; Languages
+                  </h4>
+                </div>
+                <span className="text-[11px] font-mono text-gray-400">GLOBAL COLLABORATION</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
+                <div className="p-3 rounded-xl bg-canvas-elevated border border-cyber">
+                  <span className="text-white font-bold block mb-0.5">English</span>
+                  <span className="text-agency-emerald font-mono text-[11px] font-semibold block mb-1">
+                    Professional Working Proficiency
+                  </span>
+                  <p className="text-gray-400 text-[11px]">
+                    Technical documentation, asynchronous PR reviews, and cross-functional team communication.
+                  </p>
+                </div>
+
+                <div className="p-3 rounded-xl bg-canvas-elevated border border-cyber">
+                  <span className="text-white font-bold block mb-0.5">Amharic</span>
+                  <span className="text-agency-cyan font-mono text-[11px] font-semibold block mb-1">
+                    Native Proficiency
+                  </span>
+                  <p className="text-gray-400 text-[11px]">
+                    Full native fluency for localized Ethiopian market development and TeleBirr fintech alignment.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: Education & Credentials */}
-          <div id="education" className="space-y-6">
-            <div className="flex items-center gap-2 pb-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-neon-pink"></span>
-              <h3 className="font-mono text-sm sm:text-base font-bold text-white tracking-wider uppercase">
-                Education &amp; Credentials
+          {/* =========================================================================
+              RIGHT COLUMN: ACADEMIC CREDENTIALS & DEGREES
+             ========================================================================= */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 pb-2 border-b border-cyber">
+              <GraduationCap className="w-4 h-4 text-agency-amber" />
+              <h3 className="font-mono text-sm font-bold text-white tracking-wider uppercase">
+                Academic Degrees &amp; Certified Honors
               </h3>
             </div>
 
-            {/* Education Card 1: MSc in Artificial Intelligence */}
-            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
+            {/* Degree 1: MSc in Artificial Intelligence */}
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3.5 relative group hover:border-agency-amber/40 transition-all duration-300 shadow-agency-card card-specular">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-agency-amber transition-colors">
                   MSc in Artificial Intelligence
                 </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan">
-                  2026 — Present
+                <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-agency-amber/10 border border-agency-amber/30 text-agency-amber">
+                  SCHOLAR • CURRENT
                 </span>
               </div>
 
-              <div className="text-xs font-mono text-neon-pink font-semibold">
-                Ethiopian Defense University
-              </div>
-
-              <p className="text-xs text-gray-300 leading-relaxed">
-                Advanced graduate program focusing on statistical intelligence, computational linguistics, and deep
-                neural systems. Coursework: Machine Learning, Statistical Computing, Research Methods and Seminar,
-                Natural Language Processing, Deep Learning, Computer Vision.
-              </p>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
-                  Machine Learning
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  Deep Learning
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
-                  NLP &amp; Vision
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
-                  Statistical Computing
-                </span>
-              </div>
-            </div>
-
-            {/* Education Card 2: IBT College of Canada */}
-            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
-                  Advanced Digital Skills: Software Development &amp; QA
-                </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-neon-pink/10 border border-neon-pink/30 text-neon-pink">
-                  2026 — Present
-                </span>
-              </div>
-
-              <div className="text-xs font-mono text-neon-pink font-semibold">
-                IBT College of Canada
+              <div className="text-xs font-mono text-agency-amber font-semibold flex items-center gap-1.5">
+                <span>Ethiopian Defense University</span>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">Postgraduate Research</span>
               </div>
 
               <p className="text-xs text-gray-300 leading-relaxed">
-                Six-month intensive industry program covering modern full-stack web development, Next.js/React, REST APIs,
-                Node.js, QA fundamentals, and Git workflows.
+                Postgraduate degree focused on applied machine learning, neural networks, computer vision,
+                and algorithm design using Python OOP and modern scientific computing toolchains.
               </p>
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  Next.js &amp; React
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  QA Fundamentals
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
-                  REST APIs &amp; Node.js
-                </span>
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-cyber/50">
+                {['Neural Networks', 'Computer Vision', 'Deep Learning', 'Python OOP', 'Model Optimization'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-md bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Education Card 3: Debre Birhan University */}
-            <div className="rounded-xl bg-canvas-card border border-cyber hover:border-gray-600 transition-all p-6 space-y-3 relative group">
+            {/* Degree 2: BSc in Computer Engineering */}
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3.5 relative group hover:border-agency-primary/40 transition-all duration-300 shadow-agency-card card-specular">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-base font-bold text-white group-hover:text-neon-cyan transition-colors">
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-agency-primary transition-colors">
                   BSc in Computer Engineering
                 </h4>
-                <span className="px-2.5 py-0.5 rounded font-mono text-[11px] font-semibold bg-amber-400/10 border border-amber-400/30 text-amber-400">
-                  2017 — 2022
+                <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-agency-primary/10 border border-agency-primary/30 text-agency-primary">
+                  GRADUATED 2022
                 </span>
               </div>
 
-              <div className="text-xs font-mono text-neon-pink font-semibold">
-                Debre Birhan University • Ethiopia
+              <div className="text-xs font-mono text-agency-primary font-semibold flex items-center gap-1.5">
+                <span>Debre Birhan University</span>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">Faculty of Computing</span>
               </div>
 
               <p className="text-xs text-gray-300 leading-relaxed">
-                Comprehensive 5-year engineering degree. Relevant coursework: OOP, Data Structures &amp; Algorithms,
-                Database Systems, and Software Engineering.
+                Comprehensive 5-year engineering foundation in computer systems architecture, data structures &amp;
+                algorithms, software engineering methodologies, database management systems, and networking.
               </p>
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300">
-                  OOP Architecture
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-cyan">
-                  DSA Algorithms
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-amber-400">
-                  Database Systems
-                </span>
-                <span className="px-2 py-0.5 rounded bg-canvas-elevated border border-cyber text-[11px] font-mono text-neon-pink">
-                  Software Engineering
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-cyber/50">
+                {['Computer Architecture', 'Data Structures & Algorithms', 'Operating Systems', 'DBMS', 'OOP'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-md bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Certification: IBT College of Canada */}
+            <div className="rounded-2xl bg-canvas-card border border-cyber p-6 space-y-3.5 relative group hover:border-agency-cyan/40 transition-all duration-300 shadow-agency-card card-specular">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-agency-cyan transition-colors">
+                  Advanced Digital Skills: Software Development &amp; QA
+                </h4>
+                <span className="px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-agency-cyan/10 border border-agency-cyan/30 text-agency-cyan">
+                  2026
                 </span>
               </div>
+
+              <div className="text-xs font-mono text-agency-cyan font-semibold">
+                IBT College of Canada • Professional Trainee
+              </div>
+
+              <p className="text-xs text-gray-300 leading-relaxed">
+                Intensive industry training covering modern web engineering, Next.js, React, software testing standards,
+                boundary assertions, and full-stack software delivery.
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-cyber/50">
+                {['Software QA', 'Boundary Value Testing', 'React & Next.js', 'Clean Code Architecture'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-md bg-canvas-elevated border border-cyber text-[11px] font-mono text-gray-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Official Resume Download Banner */}
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-agency-primary/15 via-agency-cyan/10 to-canvas-card border border-agency-primary/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 text-white font-bold text-sm">
+                  <FileText className="w-4 h-4 text-agency-primary" />
+                  <span>Download Verified Resume / CV</span>
+                </div>
+                <p className="text-xs text-gray-300">
+                  Detailed PDF including full coursework, credentials, and reference contacts (~98 KB).
+                </p>
+              </div>
+
+              <a
+                href="/Natnael_Getachew_Software_CV.pdf"
+                download="Natnael_Getachew_Software_CV.pdf"
+                className="px-4 py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-bold tracking-wide transition-all shadow-agency-sm flex items-center gap-2 shrink-0 active:scale-95"
+              >
+                <Download className="w-4 h-4" />
+                <span>DOWNLOAD CV (PDF)</span>
+              </a>
             </div>
           </div>
         </div>

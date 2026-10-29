@@ -10,29 +10,29 @@ import Footer from '@/components/Footer';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-canvas text-gray-100 flex flex-col selection:bg-neon-pink/30 selection:text-neon-cyan">
-      {/* Sticky Header Navigation */}
+    <main className="min-h-screen bg-canvas text-gray-100 flex flex-col selection:bg-agency-primary/30 selection:text-white">
+      {/* Agency Sticky Header & Command Palette */}
       <Navbar />
 
-      {/* Hero Section with Profile Card */}
+      {/* Hero Section with Executive Developer Showcase */}
       <Hero />
 
-      {/* Core Tech Stack Ticker */}
+      {/* High-Velocity Tech Ticker */}
       <TechTicker />
 
-      {/* Core Capabilities & Architecture Grid */}
+      {/* Technical Architecture & Capabilities Bento */}
       <CapabilitiesGrid />
 
-      {/* Proof of Execution - Featured Engineering Case Studies */}
+      {/* Selected Work & Interactive Case Studies Theater */}
       <CaseStudies />
 
-      {/* Journey, Experience & Credentials Timeline */}
+      {/* Academic Degrees & Professional Experience Timeline */}
       <ExperienceTimeline />
 
-      {/* Let's Connect & Interactive Contact Form */}
+      {/* Direct Recruiter Contact & Ingress Hub */}
       <ContactSection />
 
-      {/* Footer */}
+      {/* Refined Agency Footer */}
       <Footer />
     </main>
   );

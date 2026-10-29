@@ -117,7 +117,7 @@ const personJsonLd = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#080B10',
+  themeColor: '#090A0F',
 };
 
 export default function RootLayout({
@@ -144,8 +144,10 @@ export default function RootLayout({
                   var saved = localStorage.getItem('portfolio_theme');
                   if (saved === 'light') {
                     document.documentElement.classList.remove('dark');
+                    document.documentElement.classList.add('light');
                   } else {
                     document.documentElement.classList.add('dark');
+                    document.documentElement.classList.remove('light');
                   }
                 } catch(e) {}
               })();
@@ -155,7 +157,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="bg-canvas text-gray-200 antialiased selection:bg-neon-pink/30 selection:text-neon-cyan min-h-screen relative transition-colors duration-200"
+        className="bg-canvas text-gray-200 antialiased selection:bg-agency-primary/30 selection:text-white min-h-screen relative transition-colors duration-200"
       >
         <NetworkBanner />
         {children}

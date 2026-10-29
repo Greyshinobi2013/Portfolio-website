@@ -2,12 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { useThemeStore } from '@/store/useThemeStore';
-import { Download, Menu, X, Sun, Moon } from 'lucide-react';
+import { Download, Menu, X, Sun, Moon, Search, Sparkles } from 'lucide-react';
+import CommandPalette from './CommandPalette';
 
 export default function Navbar() {
   const { theme, toggleTheme, setTheme } = useThemeStore();
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cmdOpen, setCmdOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
     setMounted(true);
@@ -17,136 +21,223 @@ export default function Navbar() {
     } else {
       setTheme('dark');
     }
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [setTheme]);
+
+  // Real-time Scroll-Spy Observer
+  useEffect(() => {
+    const sectionIds = ['about', 'capabilities', 'projects', 'experience', 'contact'];
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, {
+      rootMargin: '-20% 0px -55% 0px',
+      threshold: 0,
+    });
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Global keyboard shortcut for Command Palette (Cmd+K or Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setCmdOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Capabilities', href: '#capabilities' },
+    { name: 'Case Studies', href: '#projects' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-canvas/85 border-b border-cyber">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Brand Logo */}
-        <a href="#about" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded bg-canvas-card border border-neon-cyan/40 flex items-center justify-center font-mono text-xs font-bold text-neon-cyan group-hover:border-neon-pink group-hover:text-neon-pink transition-colors">
-            NG
-          </div>
-          <span className="font-semibold text-sm tracking-wide text-white group-hover:text-neon-cyan transition-colors">
-            Natnael<span className="text-neon-cyan">.dev</span>
-          </span>
-        </a>
-
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center space-x-7 text-xs font-medium text-gray-300">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="hover:text-neon-cyan transition-colors tracking-wide py-1"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-
-        {/* Right Actions */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Status Pill: OPEN TO INTERNSHIPS */}
-          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neon-emerald/10 border border-neon-emerald/30 text-[11px] font-mono text-neon-emerald">
-            <span className="w-1.5 h-1.5 rounded-full bg-neon-emerald pulsing-dot"></span>
-            <span className="tracking-wider">OPEN TO INTERNSHIPS</span>
-          </div>
-
-          {/* Download CV Button */}
-          <a
-            href="/Natnael_Getachew_Software_CV.pdf"
-            download="Natnael_Getachew_Software_CV.pdf"
-            aria-label="Download Natnael Getachew Software Engineering CV PDF"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-neon-pink hover:bg-neon-magenta text-white font-mono text-xs font-bold transition-all shadow-pink-glow active:scale-95"
-            title="Download Natnael Getachew Software Engineering CV"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span className="hidden xs:inline">DOWNLOAD CV</span>
-            <span className="xs:hidden">CV</span>
+    <>
+      <header
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+          scrolled
+            ? 'backdrop-blur-xl bg-canvas/80 border-b border-cyber shadow-sm'
+            : 'bg-transparent border-b border-transparent'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+          {/* Brand Monogram */}
+          <a href="#about" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 rounded-xl bg-canvas-card border border-cyber group-hover:border-agency-primary/60 flex items-center justify-center font-mono text-xs font-extrabold text-agency-primary transition-all shadow-sm group-hover:scale-105 card-specular">
+              <span>NG</span>
+              <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-agency-emerald pulsing-dot" />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold text-sm tracking-tight text-white group-hover:text-agency-primary transition-colors">
+                Natnael Getachew
+              </span>
+              <span className="text-[11px] font-mono text-gray-400 group-hover:text-gray-300">
+                Software &amp; QA Engineer
+              </span>
+            </div>
           </a>
 
-          {/* Light/Dark Theme Toggle Button */}
-          <button
-            onClick={toggleTheme}
-            className="p-1.5 rounded bg-canvas-card border border-cyber hover:border-amber-400 text-gray-300 hover:text-amber-400 font-mono text-xs transition-colors flex items-center justify-center group active:scale-95"
-            title={mounted && theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-            aria-label="Toggle Light and Dark Mode"
-          >
-            {mounted && theme === 'light' ? (
-              <Moon className="w-4 h-4 text-neon-cyan group-hover:-rotate-12 transition-transform" />
-            ) : (
-              <Sun className="w-4 h-4 text-amber-400 group-hover:rotate-45 transition-transform" />
-            )}
-          </button>
+          {/* Desktop Nav Links with Real-Time Scroll-Spy Active Indicator */}
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-1.5 p-1.5 rounded-full bg-canvas-card/75 border border-cyber backdrop-blur-md text-xs font-medium text-gray-300 card-specular">
+            {navLinks.map((link) => {
+              const targetId = link.href.replace('#', '');
+              const isActive = activeSection === targetId;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`px-3.5 py-1.5 rounded-full transition-all tracking-wide ${
+                    isActive
+                      ? 'bg-agency-primary text-white font-semibold shadow-sm'
+                      : 'hover:text-white hover:bg-canvas-elevated text-gray-300'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
+          </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-1.5 rounded text-gray-300 hover:text-white"
-            aria-label="Toggle Menu"
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </div>
+          {/* Right Action Bar */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Command Palette Trigger */}
+            <button
+              onClick={() => setCmdOpen(true)}
+              className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-400 hover:text-gray-200 text-xs font-mono transition-all group card-specular"
+              title="Open Command Palette (⌘K)"
+              aria-label="Open command palette"
+            >
+              <Search className="w-3.5 h-3.5 group-hover:text-agency-primary transition-colors" />
+              <span>Quick Actions</span>
+              <kbd className="px-1.5 py-0.5 rounded bg-canvas-elevated border border-cyber text-[10px] text-gray-400 font-sans">
+                ⌘K
+              </kbd>
+            </button>
 
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-canvas-card border-b border-cyber px-4 pt-3 pb-5 space-y-3">
-          <div className="grid grid-cols-2 gap-2 text-xs font-medium">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded bg-canvas-elevated text-gray-200 hover:text-neon-cyan"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+            {/* Availability Pill */}
+            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-agency-emerald/10 border border-agency-emerald/30 text-[11px] font-mono text-agency-emerald font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-agency-emerald pulsing-dot" />
+              <span className="tracking-wide">OPEN FOR HIRE</span>
+            </div>
 
-          <div className="pt-2 flex flex-col gap-2">
-            {/* Mobile Download CV */}
+            {/* Download CV Action */}
             <a
               href="/Natnael_Getachew_Software_CV.pdf"
               download="Natnael_Getachew_Software_CV.pdf"
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded text-xs font-mono font-bold bg-neon-pink text-white text-center shadow-pink-glow"
+              aria-label="Download Natnael Getachew Software Engineering CV PDF"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-semibold tracking-wide transition-all shadow-agency-sm active:scale-95"
+              title="Download verified resume / CV"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>DOWNLOAD CV (PDF)</span>
+              <span className="hidden xs:inline">RESUME</span>
+              <span className="xs:hidden">CV</span>
             </a>
 
-            {/* Mobile Theme Toggle */}
+            {/* Light/Dark Theme Switcher */}
             <button
               onClick={toggleTheme}
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded text-xs font-mono border bg-canvas-elevated border-cyber text-gray-300 hover:text-white"
+              className="p-2 rounded-xl bg-canvas-card border border-cyber hover:border-gray-500 text-gray-300 hover:text-white transition-all flex items-center justify-center active:scale-95 card-specular"
+              title={mounted && theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+              aria-label="Toggle Theme"
             >
               {mounted && theme === 'light' ? (
-                <>
-                  <Moon className="w-4 h-4 text-neon-cyan" />
-                  <span>Switch to Dark Mode</span>
-                </>
+                <Moon className="w-4 h-4 text-agency-primary" />
               ) : (
-                <>
-                  <Sun className="w-4 h-4 text-amber-400" />
-                  <span>Switch to Light Mode</span>
-                </>
+                <Sun className="w-4 h-4 text-agency-amber" />
               )}
+            </button>
+
+            {/* Mobile Menu Toggle Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-xl bg-canvas-card border border-cyber text-gray-300 hover:text-white transition-colors"
+              aria-label="Toggle Navigation Menu"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Slide-down Drawer */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-canvas-card/95 border-b border-cyber px-4 pt-3 pb-6 space-y-3 backdrop-blur-2xl animate-fade-in">
+            <div className="flex items-center justify-between py-2 border-b border-cyber text-xs font-mono text-gray-400">
+              <span className="flex items-center gap-1.5 text-agency-emerald">
+                <span className="w-1.5 h-1.5 rounded-full bg-agency-emerald pulsing-dot" />
+                <span>Open for Engineering &amp; QA Roles</span>
+              </span>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setCmdOpen(true);
+                }}
+                className="text-agency-primary flex items-center gap-1 font-medium"
+              >
+                <Search className="w-3.5 h-3.5" />
+                <span>Search</span>
+              </button>
+            </div>
+
+            <nav className="flex flex-col space-y-1">
+              {navLinks.map((link) => {
+                const targetId = link.href.replace('#', '');
+                const isActive = activeSection === targetId;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                      isActive
+                        ? 'bg-agency-primary/15 text-agency-primary font-semibold'
+                        : 'text-gray-200 hover:bg-canvas-elevated hover:text-white'
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
+            </nav>
+
+            <div className="pt-2 flex flex-col gap-2">
+              <a
+                href="/Natnael_Getachew_Software_CV.pdf"
+                download="Natnael_Getachew_Software_CV.pdf"
+                className="w-full py-2.5 rounded-xl bg-agency-primary hover:bg-agency-primary-hover text-white text-xs font-bold flex items-center justify-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                <span>DOWNLOAD RESUME / CV</span>
+              </a>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Command Palette Modal */}
+      <CommandPalette isOpen={cmdOpen} onClose={() => setCmdOpen(false)} />
+    </>
   );
 }
