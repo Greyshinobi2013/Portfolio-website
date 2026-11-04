@@ -1,38 +1,34 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import TechTicker from '@/components/TechTicker';
-import CapabilitiesGrid from '@/components/CapabilitiesGrid';
 import CaseStudies from '@/components/CaseStudies';
+import CapabilitiesGrid from '@/components/CapabilitiesGrid';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-canvas text-gray-100 flex flex-col selection:bg-agency-primary/30 selection:text-white">
-      {/* Agency Sticky Header & Command Palette */}
+    <main id="top" className="min-h-screen relative">
+      {/* 1. Sticky Navigation Header */}
       <Navbar />
 
-      {/* Hero Section with Executive Developer Showcase */}
+      {/* 2. Hero 100vh Splash Section */}
       <Hero />
 
-      {/* High-Velocity Tech Ticker */}
-      <TechTicker />
-
-      {/* Technical Architecture & Capabilities Bento */}
-      <CapabilitiesGrid />
-
-      {/* Selected Work & Interactive Case Studies Theater */}
+      {/* 3. Featured Projects (Inverted White Section) */}
       <CaseStudies />
 
-      {/* Academic Degrees & Professional Experience Timeline */}
+      {/* 4. Engineering Capabilities Bento Grid (Dark Section) */}
+      <CapabilitiesGrid />
+
+      {/* 5. Career & Academic Timeline (Dark Section) */}
       <ExperienceTimeline />
 
-      {/* Direct Recruiter Contact & Ingress Hub */}
+      {/* 6. Recruiter Contact & Ingress Hub (Inverted White Section) */}
       <ContactSection />
 
-      {/* Refined Agency Footer */}
+      {/* 7. Refined Footer & Site Map */}
       <Footer />
     </main>
   );

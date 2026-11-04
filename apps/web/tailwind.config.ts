@@ -10,6 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        charcoal: {
+          DEFAULT: '#1b1b1b',
+          50: '#333333',
+          100: '#2b2b2b',
+          200: '#252525',
+          300: '#212121',
+          400: '#1b1b1b',
+          500: '#141414',
+          900: '#0c0c0c',
+        },
+        diogo: {
+          blue: '#037daf',
+          cyan: '#00acff',
+          navy: '#273377',
+          brandBlue: '#0a74db',
+          crimson: '#e91425',
+          slate: '#434343',
+          gold: '#f59e0b',
+          emerald: '#10b981',
+        },
         canvas: {
           DEFAULT: 'var(--bg-canvas)',
           card: 'var(--bg-card)',
@@ -41,6 +61,10 @@ const config: Config = {
         'cyan-glow': 'rgba(14, 165, 233, 0.35)',
       },
       boxShadow: {
+        'elevation-1': '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+        'elevation-2': '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
+        'elevation-4': '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
+        'elevation-8': '0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12)',
         'agency-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
         'agency-md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
         'agency-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
@@ -52,8 +76,9 @@ const config: Config = {
         'card-glow': '0 12px 32px -8px rgba(0, 0, 0, 0.3), 0 0 1px 1px var(--border-subtle)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        sans: ['var(--font-sans)', 'Roboto', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'Nunito', 'Roboto', 'sans-serif'],
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

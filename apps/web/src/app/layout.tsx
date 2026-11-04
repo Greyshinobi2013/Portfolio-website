@@ -1,17 +1,26 @@
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { Nunito, Roboto, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import NetworkBanner from '@/components/NetworkBanner';
+import ParticleBackdrop from '@/components/ParticleBackdrop';
 
-const sansFont = Plus_Jakarta_Sans({
+const nunitoFont = Nunito({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['300', '400', '600', '700', '800'],
+  display: 'swap',
+});
+
+const robotoFont = Roboto({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['300', '400', '500', '700'],
   display: 'swap',
 });
 
 const monoFont = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -20,25 +29,25 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://natnaelgetachew.dev
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Natnael Getachew | Software Developer & QA Intern',
+    default: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
     template: '%s | Natnael Getachew',
   },
   description:
-    'Software Developer & QA Intern portfolio of Natnael Getachew. MSc AI scholar at Defense University, BSc Computer Engineering graduate, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr API integration.',
+    'Portfolio of Natnael Getachew: Software & QA Engineer, MSc Artificial Intelligence Scholar at Ethiopian Defense University. Specializing in Next.js 16, TypeScript, Python, and TeleBirr fintech payment rails.',
   keywords: [
     'Natnael Getachew',
-    'Software Developer Intern',
-    'QA Intern',
-    'Quality Assurance Engineer',
-    'Full-Stack Developer',
+    'Software & QA Engineer',
+    'QA Engineer',
+    'Software Developer',
+    'MSc Artificial Intelligence',
     'Addis Ababa',
     'Ethiopia',
-    'Next.js App Router',
+    'Next.js 16 App Router',
     'React 18',
     'TypeScript',
     'Python',
     'TeleBirr API',
-    'Defense University',
+    'Ethiopian Defense University',
     'Debre Birhan University',
   ],
   authors: [{ name: 'Natnael Getachew', url: siteUrl }],
@@ -55,26 +64,26 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    title: 'Natnael Getachew | Software Developer & QA Intern',
+    title: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
     description:
-      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr API integration.',
+      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr fintech payment rails.',
     siteName: 'Natnael Getachew Portfolio',
     images: [
       {
         url: '/avatar.webp',
         width: 800,
         height: 600,
-        alt: 'Natnael Getachew - Software Developer & QA Intern',
+        alt: 'Natnael Getachew — Software & QA Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Natnael Getachew | Software Developer & QA Intern',
+    title: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
     description:
-      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr API integration.',
+      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr fintech payment rails.',
     images: ['/avatar.webp'],
-    creator: '@natnaelgetachew',
+    creator: '@Greyshinobi2013',
   },
   robots: {
     index: true,
@@ -93,9 +102,9 @@ const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Natnael Getachew',
-  jobTitle: 'Software Developer Intern',
+  jobTitle: 'Software & QA Engineer',
   email: 'mailto:getachewnatnael55@gmail.com',
-  telephone: '+251983833337',
+  telephone: '+251923789370',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Addis Ababa',
@@ -112,25 +121,30 @@ const personJsonLd = {
       name: 'Ethiopian Defense University',
       award: 'MSc in Artificial Intelligence',
     },
+    {
+      '@type': 'EducationalOrganization',
+      name: 'IBT College of Canada',
+      award: 'Advanced Digital Skills: Software Development & QA',
+    },
   ],
   knowsAbout: [
-    'Next.js App Router',
+    'Next.js 16 App Router',
     'React 18',
-    'TypeScript',
-    'Python',
-    'Functional QA',
-    'TeleBirr API',
-    'NestJS',
+    'TypeScript Strict',
+    'Python 3',
+    'Quality Assurance & Boundary Testing',
+    'TeleBirr Fintech API',
+    'Deep Learning & Computer Vision',
     'PostgreSQL',
   ],
   sameAs: [
     'https://github.com/Greyshinobi2013',
-    'https://linkedin.com/in/natnaelgetachew',
+    'https://www.linkedin.com/in/natnael-getachew-25b8211ba',
   ],
 };
 
 export const viewport: Viewport = {
-  themeColor: '#090A0F',
+  themeColor: '#1b1b1b',
 };
 
 export default function RootLayout({
@@ -141,7 +155,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${sansFont.variable} ${monoFont.variable} font-sans`}
+      className={`scroll-smooth ${nunitoFont.variable} ${robotoFont.variable} ${monoFont.variable} font-sans`}
       suppressHydrationWarning
     >
       <head>
@@ -153,30 +167,22 @@ export default function RootLayout({
             __html: JSON.stringify(personJsonLd),
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var saved = localStorage.getItem('portfolio_theme');
-                  if (saved === 'light') {
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.classList.add('light');
-                  } else {
-                    document.documentElement.classList.add('dark');
-                    document.documentElement.classList.remove('light');
-                  }
-                } catch(e) {}
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         suppressHydrationWarning
-        className="bg-canvas text-gray-200 antialiased selection:bg-agency-primary/30 selection:text-white min-h-screen relative transition-colors duration-200"
+        className="bg-charcoal text-[#e5e5e5] antialiased selection:bg-[#037daf]/40 selection:text-white min-h-screen relative"
       >
-        <NetworkBanner />
+        {/* Accessibility Skip Link */}
+        <a
+          href="#about"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#0a74db] focus:text-white focus:rounded focus:shadow-elevation-8 focus:font-mono focus:text-xs uppercase tracking-wider"
+        >
+          Skip to main content
+        </a>
+
+        {/* Interactive Constellation Mesh */}
+        <ParticleBackdrop />
+
         {children}
       </body>
     </html>
