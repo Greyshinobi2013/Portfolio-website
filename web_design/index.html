@@ -940,9 +940,9 @@
       <!-- Quick Metrics Bar -->
       <div class="mt-12 max-w-4xl mx-auto w-full pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         <div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4+</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3+</div>
           <div class="text-xs font-semibold text-gray-200 mt-1">Engineering Systems</div>
-          <div class="text-[11px] text-gray-400">Next.js, React SPA, ES6+, Android</div>
+          <div class="text-[11px] text-gray-400">Next.js, React SPA, Pure ES6+</div>
         </div>
         <div>
           <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">100%</div>
@@ -981,269 +981,117 @@
           <h3>My top projects</h3>
         </div>
 
-        <!-- Project Cards Grid with Distinct Brand Identities -->
+        <!-- Project Cards Grid - 3 Addis Eats Editions in Chronological Order -->
         <div class="top-projects-grid">
           
-          <!-- Card 1: Addis Eats Multi-Tier Platform (Brand Blue) -->
+          <!-- Card 1: Addis Eats — Vanilla Web App & Admin Dashboard (Jul 2026) -->
+          <div class="project-card" style="background-color: #b45309;">
+            <div class="card-content">
+              <div class="card-emblem">
+                <i data-lucide="globe" class="w-9 h-9 text-white"></i>
+              </div>
+              <h4>Addis Eats — Vanilla Web App &amp; Admin Dashboard</h4>
+              <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white font-semibold">Jul 2026</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">HTML5</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">CSS3</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">JavaScript (ES6+)</span>
+              </div>
+              <p>
+                Responsive food ordering app and admin operations dashboard developed with zero external UI libraries using pure HTML5, CSS3, and ES6+ standards.
+              </p>
+              <ul class="text-xs space-y-1.5 mb-3 opacity-95 list-disc list-inside">
+                <li class="leading-relaxed">Developed responsive food ordering app and admin operations dashboard using pure HTML5, CSS3, and ES6+.</li>
+                <li class="leading-relaxed">Engineered client-side cart calculations, live search filtering, and session-guarded admin authentication.</li>
+              </ul>
+              <div class="text-xs font-mono bg-black/20 p-2.5 rounded mt-auto space-y-1">
+                <div><strong>Stack:</strong> HTML5 • CSS3 • JavaScript (ES6+) • LocalStorage / SessionStorage</div>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/Greyshinobi2013/addis-eats" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-white/85 hover:text-white transition-colors" aria-label="Addis Eats Vanilla Source Code">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Code</span>
+              </a>
+              <a href="https://addis-eats-m2.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded bg-white text-gray-900 hover:bg-gray-100 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm inline-flex items-center gap-1.5" aria-label="Addis Eats Vanilla Live preview">
+                <span>Live preview</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Addis Eats — React Single-Page Application (SPA) (Aug 2026) -->
+          <div class="project-card" style="background-color: #0891b2;">
+            <div class="card-content">
+              <div class="card-emblem">
+                <i data-lucide="layers" class="w-9 h-9 text-white"></i>
+              </div>
+              <h4>Addis Eats — React Single-Page Application (SPA)</h4>
+              <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white font-semibold">Aug 2026</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">React 18</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">Vite</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">Zustand</span>
+              </div>
+              <p>
+                High-velocity modular Single-Page Application architected with React 18, Vite, and Zustand persist middleware for resilient local state synchronization.
+              </p>
+              <ul class="text-xs space-y-1.5 mb-3 opacity-95 list-disc list-inside">
+                <li class="leading-relaxed">Built modular SPA using Zustand with persist middleware for reliable local storage state syncing.</li>
+                <li class="leading-relaxed">Implemented real-time stock decrements and automated frosted out-of-stock overlay handling for 16+ meals.</li>
+              </ul>
+              <div class="text-xs font-mono bg-black/20 p-2.5 rounded mt-auto space-y-1">
+                <div><strong>Stack:</strong> React 18 • Vite • Zustand • React Router DOM • Recharts • Pure CSS</div>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/Greyshinobi2013/addis-eats-react" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-white/85 hover:text-white transition-colors" aria-label="Addis Eats React Source Code">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Code</span>
+              </a>
+              <a href="https://addis-eats-react-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded bg-white text-gray-900 hover:bg-gray-100 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm inline-flex items-center gap-1.5" aria-label="Addis Eats React Live preview">
+                <span>Live preview</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Addis Eats — Next.js Full-Stack App Router Edition (Sep 2026) -->
           <div class="project-card" style="background-color: #0a74db;">
             <div class="card-content">
               <div class="card-emblem">
                 <i data-lucide="utensils" class="w-9 h-9 text-white"></i>
               </div>
-              <h4>Addis Eats — Multi-Tier Platform</h4>
+              <h4>Addis Eats — Next.js Full-Stack App Router Edition</h4>
               <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
-                <span class="px-2 py-0.5 rounded bg-black/25 text-white">v3 Next.js 16 App Router</span>
-                <span class="px-2 py-0.5 rounded bg-black/25 text-white">v2 React 18 SPA</span>
-                <span class="px-2 py-0.5 rounded bg-black/25 text-white">v1 Pure ES6+</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white font-semibold">Sep 2026</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">Next.js (App Router)</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">React 18</span>
+                <span class="px-2 py-0.5 rounded bg-black/25 text-white/90">TypeScript</span>
               </div>
               <p>
-                Full-stack food delivery system architected across three progressive engineering iterations: from zero-dependency vanilla ES6+ session authentication to modular React 18 SPA with Zustand persistence, culminating in an enterprise Next.js 16 App Router platform with live TeleBirr payment rails.
+                Full-stack ordering platform ported to Next.js App Router featuring server/client boundaries, live TeleBirr payment rails, and automated delay escalation.
               </p>
-              <div class="text-xs font-mono bg-black/20 p-2.5 rounded mb-3 space-y-1">
-                <div><strong>Stack:</strong> Next.js 16 • React 18 • TypeScript • TeleBirr API</div>
-                <div><strong>Architecture:</strong> 3 Progressive Iterations • 100% QA Score</div>
+              <ul class="text-xs space-y-1.5 mb-3 opacity-95 list-disc list-inside">
+                <li class="leading-relaxed">Ported ordering platform to Next.js App Router with server/client boundaries, dynamic routes, and TeleBirr checkout.</li>
+                <li class="leading-relaxed">Engineered live delivery tracking countdown and delay escalation pipeline with 20% apology discount voucher.</li>
+              </ul>
+              <div class="text-xs font-mono bg-black/20 p-2.5 rounded mt-auto space-y-1">
+                <div><strong>Stack:</strong> Next.js (App Router) • React 18 • TypeScript • Zustand • Recharts • CSS Modules</div>
               </div>
             </div>
             <div class="card-actions">
-              <span class="text-xs font-mono opacity-80">Full-Stack Flagship</span>
-              <div class="flex items-center gap-2">
-                <button onclick="scrollToSimulator()" class="px-3 py-1.5 rounded bg-white text-blue-700 hover:bg-gray-100 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm">
-                  Try Simulator ↓
-                </button>
-                <a href="https://github.com/Greyshinobi2013" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1.5 rounded bg-white/20 hover:bg-white/30 text-white text-xs transition-colors" aria-label="GitHub Repository">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Neural Edge — Computer Vision & Deep Learning (Deep Slate Navy) -->
-          <div class="project-card" style="background-color: #1e293b;">
-            <div class="card-content">
-              <div class="card-emblem" style="background: rgba(56, 189, 248, 0.18);">
-                <i data-lucide="brain" class="w-9 h-9 text-sky-400"></i>
-              </div>
-              <h4>Neural Edge — AI Classifier</h4>
-              <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
-                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">PyTorch</span>
-                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">OpenCV</span>
-                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">Python 3.12</span>
-              </div>
-              <p>
-                Postgraduate artificial intelligence research at Ethiopian Defense University. Implements deep convolutional neural network (CNN) architectures for automated visual defect detection, edge-accelerated inference pipelines, and matrix-optimized mathematical models.
-              </p>
-              <div class="text-xs font-mono bg-black/30 p-2.5 rounded mb-3 space-y-1">
-                <div><strong>Research:</strong> Ethiopian Defense Univ (MSc AI)</div>
-                <div><strong>Focus:</strong> Convolutional Networks • Matrix Optimization</div>
-              </div>
-            </div>
-            <div class="card-actions">
-              <span class="text-xs font-mono opacity-80 text-sky-300">MSc AI Research</span>
-              <a href="https://github.com/Greyshinobi2013" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded bg-sky-500 text-white hover:bg-sky-600 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm inline-flex items-center gap-1">
-                <span>View Research</span>
-                <i data-lucide="external-link" class="w-3 h-3"></i>
+              <a href="https://github.com/Greyshinobi2013/addis-eats-next" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-white/85 hover:text-white transition-colors" aria-label="Addis Eats Next.js Source Code">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Code</span>
+              </a>
+              <a href="https://addis-eats-next-d49.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded bg-white text-gray-900 hover:bg-gray-100 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm inline-flex items-center gap-1.5" aria-label="Addis Eats Next.js Live preview">
+                <span>Live preview</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </div>
 
-          <!-- Card 3: Sentinel QA — Test Automation Framework (Deep Emerald Teal) -->
-          <div class="project-card" style="background-color: #0f766e;">
-            <div class="card-content">
-              <div class="card-emblem" style="background: rgba(16, 185, 129, 0.2);">
-                <i data-lucide="shield-check" class="w-9 h-9 text-emerald-300"></i>
-              </div>
-              <h4>Sentinel QA — Automation Suite</h4>
-              <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">Jest</span>
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">Playwright</span>
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-200 border border-emerald-500/30">CI/CD</span>
-              </div>
-              <p>
-                Enterprise quality assurance test framework engineered per IBT College of Canada software standards. Features automated boundary value analysis (BVA), equivalence partitioning, idempotency verification, and mock fintech failure recovery suites.
-              </p>
-              <div class="text-xs font-mono bg-black/25 p-2.5 rounded mb-3 space-y-1">
-                <div><strong>Standards:</strong> IBT College of Canada QA Curriculum</div>
-                <div><strong>Coverage:</strong> 100% Boundary Assertions • Zero Regressions</div>
-              </div>
-            </div>
-            <div class="card-actions">
-              <span class="text-xs font-mono opacity-80 text-emerald-200">Automated QA</span>
-              <button onclick="switchTheaterTab('qa'); scrollToSimulator();" class="px-3 py-1.5 rounded bg-white text-teal-800 hover:bg-gray-100 font-semibold text-xs tracking-wider uppercase transition-colors shadow-sm">
-                Run Suite (5) ↓
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4: Android Developer Apprenticeship (Graphite Slate) -->
-          <div class="project-card" style="background-color: #434343;">
-            <div class="card-content">
-              <div class="card-emblem">
-                <i data-lucide="smartphone" class="w-9 h-9 text-white"></i>
-              </div>
-              <h4>Android Apprenticeship</h4>
-              <div class="flex items-center justify-center gap-1.5 flex-wrap mb-3 text-[11px] font-mono">
-                <span class="px-2 py-0.5 rounded bg-black/25 text-gray-200">Android Studio</span>
-                <span class="px-2 py-0.5 rounded bg-black/25 text-gray-200">Kotlin</span>
-                <span class="px-2 py-0.5 rounded bg-black/25 text-gray-200">SQLite</span>
-              </div>
-              <p>
-                Native mobile software development at M.A.D Technologies. Translated Figma wireframes into responsive Material Design layouts with RecyclerView in Java and Kotlin. Developed a standalone Dictionary utility app with dynamic SQLite database caching.
-              </p>
-              <div class="text-xs font-mono bg-black/20 p-2.5 rounded mb-3 space-y-1">
-                <div><strong>Stack:</strong> Android Studio • Java • Kotlin • SQLite</div>
-                <div><strong>Role:</strong> Mobile Developer Intern (2022–2023)</div>
-              </div>
-            </div>
-            <div class="card-actions">
-              <span class="text-xs font-mono opacity-80">Native Mobile</span>
-              <span class="px-3 py-1.5 rounded bg-white/20 text-white font-semibold text-xs tracking-wider uppercase">
-                M.A.D Tech
-              </span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- =========================================================================
-             INTERACTIVE CASE STUDY THEATER: TELEBIRR SIMULATOR & QA RUNNER
-             ========================================================================= -->
-        <div id="interactive-theater" class="mt-16 max-w-5xl mx-auto rounded-xl border border-gray-200 bg-gray-50 p-6 sm:p-8 shadow-elevation-2 text-gray-800">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-200">
-            <div>
-              <span class="text-xs font-bold font-mono uppercase text-diogo-blue tracking-wider block mb-1">Live Engineering Sandbox</span>
-              <h4 class="font-display font-bold text-xl sm:text-2xl text-gray-900">Addis Eats TeleBirr Simulator &amp; QA Suite</h4>
-            </div>
-            <div class="flex items-center gap-2">
-              <button id="tab-sim-btn" onclick="switchTheaterTab('simulator')" class="px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-diogo-brandBlue text-white shadow-sm transition-all">
-                TeleBirr USSD Sim
-              </button>
-              <button id="tab-qa-btn" onclick="switchTheaterTab('qa')" class="px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all">
-                QA Test Runner (5)
-              </button>
-            </div>
-          </div>
-
-          <!-- TAB 1: TeleBirr Payment Simulator -->
-          <div id="tab-simulator" class="mt-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-            <div class="md:col-span-6 space-y-4">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ethiopian Phone Number (TeleBirr)</label>
-                <input type="text" id="sim-phone" value="+251911223344" class="w-full px-3 py-2 rounded border border-gray-300 font-mono text-sm focus:border-diogo-blue focus:outline-none" placeholder="+2519... or 09...">
-                <span class="text-[11px] text-gray-500 mt-1 block">Regex check: <code class="bg-gray-200 px-1 py-0.5 rounded">^(\+251|0)(9|7)\d{8}$</code></span>
-              </div>
-
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Addis Ababa Delivery Sub-City</label>
-                <div class="grid grid-cols-4 gap-2" id="subcity-selector">
-                  <button type="button" onclick="selectSubCity('Bole', 120)" class="subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-blue-50 border-blue-600 text-blue-700">
-                    Bole<span class="block text-[10px] font-mono">120 ETB</span>
-                  </button>
-                  <button type="button" onclick="selectSubCity('Kirkos', 100)" class="subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-white border-gray-300 text-gray-700">
-                    Kirkos<span class="block text-[10px] font-mono">100 ETB</span>
-                  </button>
-                  <button type="button" onclick="selectSubCity('Yeka', 140)" class="subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-white border-gray-300 text-gray-700">
-                    Yeka<span class="block text-[10px] font-mono">140 ETB</span>
-                  </button>
-                  <button type="button" onclick="selectSubCity('Arada', 90)" class="subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-white border-gray-300 text-gray-700">
-                    Arada<span class="block text-[10px] font-mono">90 ETB</span>
-                  </button>
-                </div>
-              </div>
-
-              <button type="button" id="btn-dispatch-sim" onclick="simulateTeleBirr()" class="w-full py-2.5 rounded bg-diogo-brandBlue hover:bg-blue-600 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow flex items-center justify-center gap-2">
-                <i data-lucide="play" class="w-4 h-4"></i>
-                <span>Dispatch Simulated TeleBirr USSD Push</span>
-              </button>
-            </div>
-
-            <div class="md:col-span-6 bg-white p-4 rounded-lg border border-gray-200 font-mono text-xs space-y-3">
-              <div class="flex items-center justify-between pb-2 border-b border-gray-100 text-gray-500 font-sans">
-                <span class="font-semibold text-xs">Transaction Telemetry</span>
-                <span class="text-emerald-600 font-mono font-bold">API Ingress HTTP 200</span>
-              </div>
-              <div class="space-y-1 text-gray-700">
-                <div class="flex justify-between font-sans"><span>Meal Combo (Doro Wat + Shiro):</span><span class="font-mono">440.00 ETB</span></div>
-                <div class="flex justify-between font-sans"><span>Delivery Fee (<span id="receipt-subcity">Bole</span>):</span><span class="font-mono" id="receipt-fee">120.00 ETB</span></div>
-                <div class="flex justify-between font-sans font-bold text-gray-900 pt-2 border-t border-gray-200 text-sm">
-                  <span>Total Settlement:</span>
-                  <span class="text-blue-700 font-mono" id="receipt-total">560.00 ETB</span>
-                </div>
-              </div>
-
-              <div id="sim-feedback" role="status" aria-live="polite" class="p-3 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-1 font-sans">
-                <div class="font-bold flex items-center gap-1.5">
-                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
-                  <span>Ready to dispatch payment push</span>
-                </div>
-                <div class="text-xs text-gray-600">Clicking the dispatch button simulates real-world USSD prompt dispatch to the user's mobile wallet.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TAB 2: Automated QA Test Suite Runner -->
-          <div id="tab-qa" class="mt-6 space-y-4 hidden">
-            <div class="flex items-center justify-between">
-              <div>
-                <h5 class="font-bold text-gray-900 text-sm">Automated Boundary QA &amp; Resilience Test Suite</h5>
-                <p class="text-xs text-gray-500">Functional test matrix verifying boundary assertions, regex patterns, and Zustand local storage hydration.</p>
-              </div>
-              <button onclick="runQASuite()" id="btn-run-qa" class="px-3.5 py-1.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm">
-                <i data-lucide="play" class="w-3.5 h-3.5"></i>
-                <span>Run QA Suite</span>
-              </button>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-              <div id="qa-progress" class="bg-emerald-600 h-full w-full transition-all duration-300"></div>
-            </div>
-
-            <!-- Test Table -->
-            <div class="overflow-x-auto border border-gray-200 rounded-lg bg-white">
-              <table class="w-full text-xs text-left">
-                <thead class="bg-gray-100 text-gray-600 uppercase text-[10px] tracking-wider font-semibold border-b border-gray-200">
-                  <tr>
-                    <th class="p-3">Test Specification</th>
-                    <th class="p-3">Category</th>
-                    <th class="p-3">Assertion Target</th>
-                    <th class="p-3 text-right">Result</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100 font-mono text-gray-700">
-                  <tr class="hover:bg-gray-50" id="qa-row-1">
-                    <td class="p-3 font-sans font-semibold text-gray-900">TeleBirr Phone Regex &amp; Carrier Detect</td>
-                    <td class="p-3 text-blue-600 font-sans">Validation</td>
-                    <td class="p-3 text-gray-500">Accepts +2519/+2517; rejects invalid formats</td>
-                    <td class="p-3 text-right text-emerald-600 font-bold" id="qa-status-1">PASSED (14ms)</td>
-                  </tr>
-                  <tr class="hover:bg-gray-50" id="qa-row-2">
-                    <td class="p-3 font-sans font-semibold text-gray-900">Sub-City Tiered Delivery Engine</td>
-                    <td class="p-3 text-blue-600 font-sans">Calculations</td>
-                    <td class="p-3 text-gray-500">Computes correct tiered delivery fee for sub-cities</td>
-                    <td class="p-3 text-right text-emerald-600 font-bold" id="qa-status-2">PASSED (18ms)</td>
-                  </tr>
-                  <tr class="hover:bg-gray-50" id="qa-row-3">
-                    <td class="p-3 font-sans font-semibold text-gray-900">Cart Inventory Hard Ceilings</td>
-                    <td class="p-3 text-blue-600 font-sans">Boundary QA</td>
-                    <td class="p-3 text-gray-500">Prevents quantity increment above available stock</td>
-                    <td class="p-3 text-right text-emerald-600 font-bold" id="qa-status-3">PASSED (9ms)</td>
-                  </tr>
-                  <tr class="hover:bg-gray-50" id="qa-row-4">
-                    <td class="p-3 font-sans font-semibold text-gray-900">Delivery Delay Escalation (20% Voucher)</td>
-                    <td class="p-3 text-blue-600 font-sans">State Resilience</td>
-                    <td class="p-3 text-gray-500">Triggers ADDISLATE20 discount voucher on 30m delay</td>
-                    <td class="p-3 text-right text-emerald-600 font-bold" id="qa-status-4">PASSED (22ms)</td>
-                  </tr>
-                  <tr class="hover:bg-gray-50" id="qa-row-5">
-                    <td class="p-3 font-sans font-semibold text-gray-900">Zustand LocalStorage Persist Hydration</td>
-                    <td class="p-3 text-blue-600 font-sans">Hydration</td>
-                    <td class="p-3 text-gray-500">Rehydrates cart state seamlessly across reloads</td>
-                    <td class="p-3 text-right text-emerald-600 font-bold" id="qa-status-5">PASSED (11ms)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -1311,33 +1159,7 @@
             </div>
           </div>
 
-          <!-- Bento 2: Software QA & Boundary Testing -->
-          <div class="rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="p-2.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                  <i data-lucide="shield-check" class="w-6 h-6"></i>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">Zero Defect</span>
-              </div>
-              <h4 class="font-display font-bold text-xl text-white mb-2">Quality Assurance &amp; Boundary QA</h4>
-              <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
-                Engineering test plans that subject digital systems to boundary value analysis, idempotency verification, and simulated network failures.
-              </p>
-              <div class="space-y-2 p-3 rounded-lg bg-charcoal-300 border border-white/5 font-mono text-xs">
-                <div class="flex justify-between"><span class="text-gray-400">Boundary Assertions:</span><span class="text-emerald-400">100% Passed</span></div>
-                <div class="flex justify-between"><span class="text-gray-400">Offline Resilience:</span><span class="text-diogo-cyan">Auto-Draft Fallback</span></div>
-                <div class="flex justify-between"><span class="text-gray-400">Framework:</span><span class="text-white">Jest &amp; Functional QA</span></div>
-              </div>
-            </div>
-            <div class="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Boundary Analysis</span>
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Idempotency</span>
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Regression QA</span>
-            </div>
-          </div>
-
-          <!-- Bento 3: AI & Neural Systems -->
+          <!-- Bento 2: AI & Neural Systems -->
           <div class="rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-amber-500/40 transition-colors">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -1363,8 +1185,8 @@
             </div>
           </div>
 
-          <!-- Bento 4: Backend Systems & Distributed API Architecture (2-col) -->
-          <div class="lg:col-span-2 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-blue/40 transition-colors">
+          <!-- Bento 3: Backend Systems & Distributed API Architecture (3-col full width, Currently Learning) -->
+          <div class="lg:col-span-3 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-blue/40 transition-colors">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-3">
@@ -1376,42 +1198,43 @@
                     <h4 class="font-display font-bold text-xl text-white">Backend Systems &amp; Distributed API Architecture</h4>
                   </div>
                 </div>
-                <span class="px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">REST &amp; TeleBirr</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-medium">Currently Learning</span>
               </div>
               <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                Constructing resilient server architectures with Next.js Server Actions, Python FastAPI, PostgreSQL relational modeling, and production TeleBirr fintech settlement gateways with USSD idempotency keys and automated delay compensation.
+                Actively learning and mastering modern backend architectures using Node.js, Nest.js, and PostgreSQL. Focusing on modular enterprise controllers, dependency injection patterns, relational schema modeling, and robust RESTful API design.
               </p>
 
-              <!-- 4-Step Stepper -->
+              <!-- 4-Step Stepper showcasing Node.js, Nest.js, PostgreSQL -->
               <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                 <div class="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span class="text-diogo-blue text-xs font-bold block mb-1">01 • Ingress</span>
-                  <span class="text-white font-semibold block">FastAPI &amp; Routes</span>
-                  <span class="text-gray-400 text-[10px] mt-1 block">Typed API endpoints</span>
+                  <span class="text-diogo-blue text-xs font-bold block mb-1">01 • Runtime</span>
+                  <span class="text-white font-semibold block">Node.js</span>
+                  <span class="text-gray-400 text-[10px] mt-1 block">Async event loop &amp; I/O</span>
                 </div>
                 <div class="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span class="text-diogo-cyan text-xs font-bold block mb-1">02 • Persistence</span>
-                  <span class="text-white font-semibold block">PostgreSQL / SQL</span>
-                  <span class="text-gray-400 text-[10px] mt-1 block">Relational modeling</span>
+                  <span class="text-diogo-cyan text-xs font-bold block mb-1">02 • Framework</span>
+                  <span class="text-white font-semibold block">Nest.js</span>
+                  <span class="text-gray-400 text-[10px] mt-1 block">Modular DI &amp; controllers</span>
                 </div>
                 <div class="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span class="text-emerald-400 text-xs font-bold block mb-1">03 • Payments</span>
-                  <span class="text-white font-semibold block">TeleBirr USSD</span>
-                  <span class="text-gray-400 text-[10px] mt-1 block">Fintech payment push</span>
+                  <span class="text-emerald-400 text-xs font-bold block mb-1">03 • Persistence</span>
+                  <span class="text-white font-semibold block">PostgreSQL</span>
+                  <span class="text-gray-400 text-[10px] mt-1 block">Relational schema &amp; SQL</span>
                 </div>
                 <div class="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span class="text-amber-400 text-xs font-bold block mb-1">04 • Reliability</span>
-                  <span class="text-white font-semibold block">Idempotency Guard</span>
-                  <span class="text-gray-400 text-[10px] mt-1 block">Auto-retry &amp; recovery</span>
+                  <span class="text-amber-400 text-xs font-bold block mb-1">04 • Architecture</span>
+                  <span class="text-white font-semibold block">REST APIs</span>
+                  <span class="text-gray-400 text-[10px] mt-1 block">Clean contracts &amp; routing</span>
                 </div>
               </div>
             </div>
             <div class="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Python FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Node.js</span>
+              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Nest.js</span>
               <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">PostgreSQL</span>
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TeleBirr Gateway</span>
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Idempotency Keys</span>
-              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Docker</span>
+              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">RESTful APIs</span>
+              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TypeScript</span>
+              <span class="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Modular Architecture</span>
             </div>
           </div>
 
@@ -1427,7 +1250,7 @@
         <div class="text-center mb-1">
           <span class="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-amber-400 mb-1">// Journey &amp; Milestones</span>
           <h2>Career &amp; Academic Timeline</h2>
-          <h3>Milestones, academic degrees, and professional apprenticeships</h3>
+          <h3>Milestones, academic degrees, and professional experience</h3>
         </div>
 
         <div class="timeline">
@@ -1441,52 +1264,40 @@
               </svg>
             </span>
             <div class="timeline-element-content">
+              <span class="text-[11px] font-mono uppercase tracking-wider font-bold text-diogo-brandBlue block mb-1">
+                Postgraduate Education
+              </span>
               <h4>MSc in Artificial Intelligence</h4>
-              <h5>Scholar • Postgraduate Research at Ethiopian Defense University</h5>
+              <h5>Ethiopian Defense University • Postgraduate AI Research</h5>
               <p>
-                Advanced postgraduate studies focused on machine learning, deep neural network architectures, computer vision, and algorithm design using Python OOP and modern scientific toolchains.
+                Advanced postgraduate studies focused on machine learning, deep neural network architectures, computer vision, natural language processing (NLP), statistical computing, and algorithmic research using Python OOP and modern scientific toolchains.
               </p>
             </div>
             <span class="timeline-element-date">2026 — Present</span>
           </div>
 
-          <!-- Element 2: CodeOps Capstone Engineering -->
+          <!-- Element 2: IBT College of Canada Certification -->
           <div class="timeline-element">
-            <span class="timeline-element-icon" style="background-color: #037daf; color: #ffffff;">
+            <span class="timeline-element-icon" style="background-color: #10b981; color: #ffffff;">
               <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"/>
                 <polyline points="8 6 2 12 8 18"/>
               </svg>
             </span>
             <div class="timeline-element-content">
-              <h4>Full-Stack Software Development Trainee</h4>
-              <h5>CodeOps Capstone Engineering • Web &amp; API Systems</h5>
-              <p>
-                Architected production portfolio systems and three iterations of the Addis Eats ordering platform across Next.js 16 App Router, React modular SPA, and pure ES6+. Integrated TeleBirr API fintech ingress and automated QA test plans with zero regressions.
-              </p>
-            </div>
-            <span class="timeline-element-date">2026</span>
-          </div>
-
-          <!-- Element 3: IBT College of Canada Certification -->
-          <div class="timeline-element">
-            <span class="timeline-element-icon" style="background-color: #10b981; color: #ffffff;">
-              <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
-            </span>
-            <div class="timeline-element-content">
+              <span class="text-[11px] font-mono uppercase tracking-wider font-bold text-diogo-brandBlue block mb-1">
+                Professional Training
+              </span>
               <h4>Advanced Digital Skills: Software Development &amp; QA</h4>
-              <h5>Certified Professional Trainee • IBT College of Canada</h5>
+              <h5>IBT College of Canada • Global Technology Training</h5>
               <p>
-                Rigorous training covering modern web engineering, clean code architecture, software QA standards, boundary value testing, and enterprise delivery standards.
+                Six-month intensive professional training program covering modern full-stack web engineering, Next.js / React 18, REST APIs, Node.js, software quality assurance fundamentals, boundary value analysis (BVA), and enterprise Git workflows.
               </p>
             </div>
-            <span class="timeline-element-date">Certified 2026</span>
+            <span class="timeline-element-date">2026 — Present</span>
           </div>
 
-          <!-- Element 4: Android Developer Intern (M.A.D Technologies) -->
+          <!-- Element 3: Android Developer Intern (M.A.D Technologies) -->
           <div class="timeline-element">
             <span class="timeline-element-icon" style="background-color: #434343; color: #ffffff;">
               <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1495,16 +1306,19 @@
               </svg>
             </span>
             <div class="timeline-element-content">
+              <span class="text-[11px] font-mono uppercase tracking-wider font-bold text-diogo-brandBlue block mb-1">
+                Professional Experience
+              </span>
               <h4>Android Developer Intern</h4>
               <h5>M.A.D Technologies • Addis Ababa, Ethiopia</h5>
               <p>
-                Collaborated on commercial native Android applications, translating Figma wireframes into responsive Material Design layouts with RecyclerView in Java and Kotlin. Developed a standalone Dictionary mobile app with local SQLite caching.
+                Collaborated on commercial native Android applications, translating Figma wireframes into responsive Material Design layouts with RecyclerView in Java and Kotlin. Developed a standalone Dictionary mobile app with dynamic SQLite database caching.
               </p>
             </div>
             <span class="timeline-element-date">2022 — 2023</span>
           </div>
 
-          <!-- Element 5: BSc in Computer Engineering (Debre Birhan University) -->
+          <!-- Element 4: BSc in Computer Engineering (Debre Birhan University) -->
           <div class="timeline-element">
             <span class="timeline-element-icon" style="background-color: #0a74db; color: #ffffff;">
               <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1514,13 +1328,16 @@
               </svg>
             </span>
             <div class="timeline-element-content">
+              <span class="text-[11px] font-mono uppercase tracking-wider font-bold text-diogo-brandBlue block mb-1">
+                Undergraduate Education
+              </span>
               <h4>BSc in Computer Engineering</h4>
               <h5>Debre Birhan University • Faculty of Computing</h5>
               <p>
-                Comprehensive 5-year engineering foundation covering computer architecture, data structures &amp; algorithms, operating systems, database management systems (DBMS), and software engineering methodologies.
+                Comprehensive 5-year engineering foundation. Relevant coursework: Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, Database Management Systems (DBMS), Operating Systems, and Software Engineering methodologies.
               </p>
             </div>
-            <span class="timeline-element-date">Graduated 2022</span>
+            <span class="timeline-element-date">2017 — 2022</span>
           </div>
 
         </div>
@@ -1563,14 +1380,14 @@
             <div class="p-5 rounded-lg border border-gray-200 bg-gray-50 flex items-start justify-between shadow-sm">
               <div class="space-y-1">
                 <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider block">Phone &amp; Telegram</span>
-                <span class="text-sm font-bold text-gray-900 font-mono">+251 92 378 9370</span>
+                <a href="tel:+251923789370" class="text-sm font-bold text-gray-900 font-mono hover:text-emerald-700 transition-colors block">+251 92 378 9370</a>
                 <span class="text-xs text-gray-500 block">Direct calling &amp; Telegram message ingress</span>
               </div>
-              <div class="p-2.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <a href="tel:+251923789370" class="p-2.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors border border-emerald-200 cursor-pointer shadow-sm flex items-center justify-center" title="Call +251 92 378 9370 via Network" aria-label="Call +251 92 378 9370">
                 <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
-              </div>
+              </a>
             </div>
 
             <!-- Location & Working Timezone Card -->
@@ -1647,7 +1464,7 @@
 
               <button type="submit" id="form-submit-btn" class="w-full py-3 rounded bg-diogo-brandBlue hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider transition-all shadow flex items-center justify-center gap-2">
                 <i data-lucide="send" class="w-4 h-4"></i>
-                <span>Transmit Ingress Message</span>
+                <span>Send Enquiry</span>
               </button>
               
               <div id="form-status" role="status" aria-live="polite" class="hidden p-3 rounded text-center text-xs font-medium"></div>
@@ -1949,124 +1766,7 @@
     setupCopy('hero-copy-email', 'hero-copy-tooltip');
     setupCopy('copy-email-btn');
 
-    // 5. Theater Tab Switching
-    function switchTheaterTab(tab) {
-      const simTab = document.getElementById('tab-simulator');
-      const qaTab = document.getElementById('tab-qa');
-      const simBtn = document.getElementById('tab-sim-btn');
-      const qaBtn = document.getElementById('tab-qa-btn');
-
-      if (tab === 'simulator') {
-        simTab.classList.remove('hidden');
-        qaTab.classList.add('hidden');
-        simBtn.className = 'px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-diogo-brandBlue text-white shadow-sm transition-all';
-        qaBtn.className = 'px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all';
-      } else {
-        simTab.classList.add('hidden');
-        qaTab.classList.remove('hidden');
-        qaBtn.className = 'px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-emerald-600 text-white shadow-sm transition-all';
-        simBtn.className = 'px-3.5 py-1.5 rounded text-xs font-semibold uppercase tracking-wider bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all';
-      }
-    }
-
-    function scrollToSimulator() {
-      const el = document.getElementById('interactive-theater');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      switchTheaterTab('simulator');
-    }
-
-    // 6. Sub-City Fee Selector
-    let currentDeliveryFee = 120;
-    let currentSubCity = 'Bole';
-
-    function selectSubCity(city, fee) {
-      currentSubCity = city;
-      currentDeliveryFee = fee;
-      
-      const buttons = document.querySelectorAll('.subcity-btn');
-      buttons.forEach(btn => {
-        if (btn.textContent.includes(city)) {
-          btn.className = 'subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-blue-50 border-blue-600 text-blue-700';
-        } else {
-          btn.className = 'subcity-btn py-2 px-1 rounded border text-center text-xs font-semibold bg-white border-gray-300 text-gray-700';
-        }
-      });
-
-      document.getElementById('receipt-subcity').textContent = city;
-      document.getElementById('receipt-fee').textContent = `${fee}.00 ETB`;
-      document.getElementById('receipt-total').textContent = `${440 + fee}.00 ETB`;
-    }
-
-    // 7. TeleBirr USSD Simulation
-    function simulateTeleBirr() {
-      const phoneInput = document.getElementById('sim-phone');
-      const val = phoneInput.value.trim().replace(/\s+/g, '');
-      const feedback = document.getElementById('sim-feedback');
-      const btn = document.getElementById('btn-dispatch-sim');
-
-      const isValid = /^(\+251|0)(9|7)\d{8}$/.test(val);
-      if (!isValid) {
-        feedback.className = 'p-3 rounded bg-red-50 border border-red-200 text-red-800 space-y-1 font-sans';
-        feedback.innerHTML = `<strong>Invalid Ethiopian Format:</strong> Please enter a valid number starting with +2519, +2517, 09, or 07 followed by 8 digits.`;
-        return;
-      }
-
-      btn.disabled = true;
-      btn.innerHTML = `<span class="animate-spin mr-2">◌</span> Dispatching USSD push to ${val}...`;
-
-      setTimeout(() => {
-        const txId = `ET-TB-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-        feedback.className = 'p-3 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-1 font-sans';
-        feedback.innerHTML = `
-          <div class="font-bold flex items-center gap-1.5">
-            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
-            <span>TeleBirr Authorization Confirmed ✓</span>
-          </div>
-          <div><strong>Transaction Hash:</strong> <code class="font-mono text-emerald-900">${txId}</code></div>
-          <div class="text-xs text-gray-700">Simulated prompt authorized on mobile handset. 30-min countdown timer engaged for ${currentSubCity} delivery.</div>
-        `;
-        lucide.createIcons();
-        btn.disabled = false;
-        btn.innerHTML = `<i data-lucide="play" class="w-4 h-4"></i><span>Dispatch Simulated TeleBirr USSD Push</span>`;
-      }, 1000);
-    }
-
-    // 8. Automated QA Suite Runner
-    function runQASuite() {
-      const btn = document.getElementById('btn-run-qa');
-      const progress = document.getElementById('qa-progress');
-      btn.disabled = true;
-      btn.innerHTML = `<span class="animate-spin mr-1">◌</span> Executing Suite...`;
-
-      for (let i = 1; i <= 5; i++) {
-        const el = document.getElementById(`qa-status-${i}`);
-        if (el) {
-          el.className = 'p-3 text-right text-amber-500 font-bold';
-          el.textContent = 'RUNNING...';
-        }
-      }
-      progress.style.width = '0%';
-
-      let step = 0;
-      const interval = setInterval(() => {
-        step++;
-        progress.style.width = `${(step / 5) * 100}%`;
-        const el = document.getElementById(`qa-status-${step}`);
-        if (el) {
-          const ms = Math.floor(8 + Math.random() * 15);
-          el.className = 'p-3 text-right text-emerald-600 font-bold';
-          el.textContent = `PASSED (${ms}ms) ✓`;
-        }
-        if (step >= 5) {
-          clearInterval(interval);
-          btn.disabled = false;
-          btn.innerHTML = `<i data-lucide="play" class="w-3.5 h-3.5"></i><span>Re-run QA Suite</span>`;
-          lucide.createIcons();
-        }
-      }, 250);
-    }
-
-    // 9. Interactive Contact Form Submission Simulation
+    // 5. Interactive Contact Form Submission Simulation
     function handleContactSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('form-name').value;
@@ -2084,7 +1784,7 @@
         document.getElementById('contact-form').reset();
         lucide.createIcons();
         setTimeout(() => {
-          btn.innerHTML = `<i data-lucide="send" class="w-4 h-4"></i><span>Transmit Ingress Message</span>`;
+          btn.innerHTML = `<i data-lucide="send" class="w-4 h-4"></i><span>Send Enquiry</span>`;
           status.className = 'hidden';
           lucide.createIcons();
         }, 5000);

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Layout, CheckSquare, Brain, Server } from 'lucide-react';
+import { Layout, Brain, Server } from 'lucide-react';
 
 export default function CapabilitiesGrid() {
   return (
@@ -84,44 +84,7 @@ export default function CapabilitiesGrid() {
             </div>
           </div>
 
-          {/* Bento 2: Quality Assurance & Boundary QA (1-col) */}
-          <div className="rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-emerald-500/40 transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-2.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                  <CheckSquare className="w-6 h-6" />
-                </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
-                  Zero Defect
-                </span>
-              </div>
-              <h4 className="font-display font-bold text-xl text-white mb-2">Quality Assurance &amp; Boundary QA</h4>
-              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
-                Engineering test plans that subject digital systems to boundary value analysis, idempotency verification, and simulated network failures.
-              </p>
-              <div className="p-3 rounded-lg bg-charcoal-300 border border-white/5 font-mono text-xs space-y-1.5">
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Boundary Assertions:</span>
-                  <span className="text-emerald-400 font-bold">100% Passed</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Offline Resilience:</span>
-                  <span className="text-blue-400">Auto-Draft Fallback</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-400">Framework:</span>
-                  <span className="text-white">Jest &amp; Functional QA</span>
-                </div>
-              </div>
-            </div>
-            <div className="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Boundary Analysis</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Idempotency</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Regression QA</span>
-            </div>
-          </div>
-
-          {/* Bento 3: AI & Neural Systems (1-col) */}
+          {/* Bento 2: AI & Neural Systems (1-col) */}
           <div className="rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-amber-500/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -149,8 +112,8 @@ export default function CapabilitiesGrid() {
             </div>
           </div>
 
-          {/* Bento 4: Backend Systems & Distributed API Architecture (2-col) */}
-          <div className="lg:col-span-2 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-blue/40 transition-colors">
+          {/* Bento 3: Backend Systems & Distributed API Architecture (3-col full width, Currently Learning) */}
+          <div className="lg:col-span-3 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-blue/40 transition-colors">
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -162,44 +125,45 @@ export default function CapabilitiesGrid() {
                     <h4 className="font-display font-bold text-xl text-white">Backend Systems &amp; Distributed API Architecture</h4>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">
-                  REST &amp; TeleBirr
+                <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-medium">
+                  Currently Learning
                 </span>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Constructing resilient server architectures with Next.js Server Actions, Python FastAPI, PostgreSQL relational modeling, and production TeleBirr fintech settlement gateways with USSD idempotency keys and automated delay compensation.
+                Actively learning and mastering modern backend architectures using Node.js, Nest.js, and PostgreSQL. Focusing on modular enterprise controllers, dependency injection patterns, relational schema modeling, and robust RESTful API design.
               </p>
 
-              {/* 4-Step Stepper */}
+              {/* 4-Step Stepper showcasing Node.js, Nest.js, PostgreSQL */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                 <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-diogo-blue text-xs font-bold block mb-1">01 • Ingress</span>
-                  <span className="text-white font-semibold block">FastAPI &amp; Routes</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Typed API endpoints</span>
+                  <span className="text-diogo-blue text-xs font-bold block mb-1">01 • Runtime</span>
+                  <span className="text-white font-semibold block">Node.js</span>
+                  <span className="text-gray-400 text-[10px] mt-1 block">Async event loop &amp; I/O</span>
                 </div>
                 <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-diogo-cyan text-xs font-bold block mb-1">02 • Persistence</span>
-                  <span className="text-white font-semibold block">PostgreSQL / SQL</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Relational modeling</span>
+                  <span className="text-diogo-cyan text-xs font-bold block mb-1">02 • Framework</span>
+                  <span className="text-white font-semibold block">Nest.js</span>
+                  <span className="text-gray-400 text-[10px] mt-1 block">Modular DI &amp; controllers</span>
                 </div>
                 <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-emerald-400 text-xs font-bold block mb-1">03 • Payments</span>
-                  <span className="text-white font-semibold block">TeleBirr USSD</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Fintech payment push</span>
+                  <span className="text-emerald-400 text-xs font-bold block mb-1">03 • Persistence</span>
+                  <span className="text-white font-semibold block">PostgreSQL</span>
+                  <span className="text-gray-400 text-[10px] mt-1 block">Relational schema &amp; SQL</span>
                 </div>
                 <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-amber-400 text-xs font-bold block mb-1">04 • Reliability</span>
-                  <span className="text-white font-semibold block">Idempotency Guard</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Auto-retry &amp; recovery</span>
+                  <span className="text-amber-400 text-xs font-bold block mb-1">04 • Architecture</span>
+                  <span className="text-white font-semibold block">REST APIs</span>
+                  <span className="text-gray-400 text-[10px] mt-1 block">Clean contracts &amp; routing</span>
                 </div>
               </div>
             </div>
             <div className="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Python FastAPI</span>
+              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Node.js</span>
+              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Nest.js</span>
               <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">PostgreSQL</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TeleBirr Gateway</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Idempotency Keys</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Docker</span>
+              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">RESTful APIs</span>
+              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TypeScript</span>
+              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Modular Architecture</span>
             </div>
           </div>
         </div>

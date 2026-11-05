@@ -82,7 +82,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'nav-projects',
       title: 'Featured Case Studies',
-      subtitle: 'Addis Eats full-stack, TeleBirr simulator & QA suite',
+      subtitle: 'Addis Eats: Vanilla, React SPA & Next.js editions',
       icon: <FolderGit2 className="w-4 h-4 text-agency-primary" />,
       category: 'Navigation',
       action: () => {

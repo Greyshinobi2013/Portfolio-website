@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowDown, Mail, FileText } from 'lucide-react';
 
 const rotatingRoles = [
-  'Software Developer',
+  'Software Engineer',
   'QA Engineer',
   'AI specialist',
   'MSc AI Scholar',
@@ -69,7 +69,7 @@ export default function Hero() {
         Computer Engineering graduate from{' '}
         <strong className="text-white font-semibold">Debre Birhan University</strong>, postgraduate{' '}
         <strong className="text-white font-semibold">MSc Artificial Intelligence scholar</strong> at Ethiopian Defense University,
-        and IBT College of Canada Software Development &amp; QA graduate. Specializing in Next.js App Router, strict TypeScript, Python, and TeleBirr fintech payment rails.
+        and IBT College of Canada Software &amp; QA Engineering trainee. Specializing in React, Next.js App Router, Tailwind CSS, strict Javascript/TypeScript, Python, Linux, Version Control System.
       </p>
 
       {/* Language & Communication Badges */}

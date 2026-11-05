@@ -108,16 +108,24 @@ export default function ContactSection() {
                 <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider block">
                   Phone &amp; Telegram
                 </span>
-                <span className="text-sm font-bold text-gray-900 font-mono">
+                <a
+                  href="tel:+251923789370"
+                  className="text-sm font-bold text-gray-900 font-mono hover:text-emerald-700 transition-colors block"
+                >
                   +251 92 378 9370
-                </span>
+                </a>
                 <span className="text-xs text-gray-500 block">
                   Direct calling &amp; Telegram message ingress
                 </span>
               </div>
-              <div className="p-2.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <a
+                href="tel:+251923789370"
+                className="p-2.5 rounded bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 transition-colors border border-emerald-200 cursor-pointer shadow-sm flex items-center justify-center"
+                title="Call +251 92 378 9370 via Network"
+                aria-label="Call +251 92 378 9370"
+              >
                 <Phone className="w-4 h-4 shrink-0" />
-              </div>
+              </a>
             </div>
 
             {/* Location & Working Timezone Card */}
@@ -253,7 +261,7 @@ export default function ContactSection() {
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Transmit Ingress Message</span>
+                    <span>Send Enquiry</span>
                   </>
                 )}
               </button>
