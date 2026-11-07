@@ -176,9 +176,9 @@ export default function Hero() {
       {/* Quick Metrics Bar */}
       <div className="mt-12 max-w-4xl mx-auto w-full pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         <div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">4+</div>
-          <div className="text-xs font-semibold text-gray-200 mt-1">Engineering Systems</div>
-          <div className="text-[11px] text-gray-400">Next.js, React SPA, ES6+, Android</div>
+          <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">Core</div>
+          <div className="text-xs font-semibold text-gray-200 mt-1">Engineering Focus</div>
+          <div className="text-[11px] text-gray-400">React, TypeScript, Nest.js, Python</div>
         </div>
         <div>
           <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">100%</div>
