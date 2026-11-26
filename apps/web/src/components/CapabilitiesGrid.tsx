@@ -1,169 +1,157 @@
-'use client';
-
 import React from 'react';
-import { Layout, Brain, Server } from 'lucide-react';
+import { Layout, ShieldCheck, Server } from 'lucide-react';
 
 export default function CapabilitiesGrid() {
   return (
-    <section id="capabilities" className="section-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-1">
-          <span className="inline-block font-mono text-xs font-semibold tracking-widest uppercase text-diogo-cyan mb-1">
-            // Technical Specialization &amp; Systems
-          </span>
-          <h2>Engineering Disciplines</h2>
-          <h3>Technical architecture &amp; core capabilities</h3>
+    <section id="capabilities" className="section-band--deep">
+      <div className="container">
+        <div className="section-head">
+          <div className="space-y-3">
+            <h2>Technical Skills</h2>
+            <p className="lead">Languages, front-end engineering, QA practices, and back-end progression.</p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Bento 1: Frontend Systems & Next.js 16 (2-col) */}
-          <div className="lg:col-span-2 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-cyan/40 transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-4">
+        <div className="panels grid-cols-1 lg:grid-cols-12">
+          {/* Panel 1: Frontend & Languages */}
+          <div className="panel-cell lg:col-span-7 flex flex-col justify-between gap-6">
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-diogo-blue/20 text-diogo-cyan border border-diogo-cyan/30">
-                    <Layout className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-semibold text-diogo-cyan uppercase font-mono">Core Stack</span>
-                    <h4 className="font-display font-bold text-xl text-white">
-                      Frontend Systems &amp; Next.js 16 (App Router)
-                    </h4>
-                  </div>
+                  <Layout className="w-5 h-5 text-cool shrink-0" aria-hidden="true" />
+                  <span className="text-sm text-muted font-medium">Frontend &amp; Languages</span>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
-                  Lighthouse 100
+                <span className="chip chip--ok">
+                  Lighthouse <span className="measured">100</span>
                 </span>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Architecting high-velocity web applications using Next.js App Router (RSC), React 18, and Zustand. Strict separation of server-rendered static content and interactive client leaves eliminates network waterfalls and achieves zero cumulative layout shift (CLS).
+
+              <h3 className="text-ink">Frontend Engineering &amp; Core Languages</h3>
+
+              <p className="text-muted text-sm leading-relaxed max-w-[65ch]">
+                Completed the front-end phase of IBT Ethiopia&apos;s Software &amp; QA Engineering program across
+                JavaScript, TypeScript, vanilla CSS, Tailwind CSS, Python, and Linux.
               </p>
 
-              {/* Lighthouse Benchmarks & Zero-Waterfall Tree */}
-              <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center bg-charcoal-300 p-4 rounded-lg border border-white/5">
-                <div className="sm:col-span-6">
-                  <span className="text-[11px] font-mono text-gray-400 block mb-2 font-semibold uppercase">
-                    Audit Benchmarks:
-                  </span>
-                  <div className="grid grid-cols-4 gap-2 text-center font-mono">
-                    <div className="p-2 rounded bg-charcoal-200 border border-emerald-500/30">
-                      <span className="text-emerald-400 font-bold block text-sm">100</span>
-                      <span className="text-[10px] text-gray-400 uppercase">Perf</span>
-                    </div>
-                    <div className="p-2 rounded bg-charcoal-200 border border-emerald-500/30">
-                      <span className="text-emerald-400 font-bold block text-sm">100</span>
-                      <span className="text-[10px] text-gray-400 uppercase">A11y</span>
-                    </div>
-                    <div className="p-2 rounded bg-charcoal-200 border border-emerald-500/30">
-                      <span className="text-emerald-400 font-bold block text-sm">100</span>
-                      <span className="text-[10px] text-gray-400 uppercase">Best</span>
-                    </div>
-                    <div className="p-2 rounded bg-charcoal-200 border border-emerald-500/30">
-                      <span className="text-emerald-400 font-bold block text-sm">100</span>
-                      <span className="text-[10px] text-gray-400 uppercase">SEO</span>
-                    </div>
+              <div className="pt-4 border-t border-rule grid grid-cols-1 sm:grid-cols-2 gap-6 items-end">
+                <div>
+                  <div className="text-sm font-medium text-ink mb-2">Lighthouse Reading</div>
+                  <div className="reading reading-count mb-3" aria-label="Lighthouse score 100">
+                    <span className="visually-hidden">100</span>
                   </div>
+                  <dl className="grid grid-cols-4 gap-3">
+                    <div className="border-t border-rule pt-2 flex flex-col-reverse">
+                      <dt className="text-xs text-muted mt-0.5">Perf</dt>
+                      <dd className="measured text-sm font-medium">100</dd>
+                    </div>
+                    <div className="border-t border-rule pt-2 flex flex-col-reverse">
+                      <dt className="text-xs text-muted mt-0.5">A11y</dt>
+                      <dd className="measured text-sm font-medium">100</dd>
+                    </div>
+                    <div className="border-t border-rule pt-2 flex flex-col-reverse">
+                      <dt className="text-xs text-muted mt-0.5">Best</dt>
+                      <dd className="measured text-sm font-medium">100</dd>
+                    </div>
+                    <div className="border-t border-rule pt-2 flex flex-col-reverse">
+                      <dt className="text-xs text-muted mt-0.5">SEO</dt>
+                      <dd className="measured text-sm font-medium">100</dd>
+                    </div>
+                  </dl>
                 </div>
 
-                <div className="sm:col-span-6 font-mono text-xs border-t sm:border-t-0 sm:border-l border-white/10 pt-3 sm:pt-0 sm:pl-4 space-y-1">
-                  <span className="text-[11px] text-gray-400 block mb-1 font-semibold uppercase font-mono">
-                    Zero-Waterfall Tree:
-                  </span>
-                  <div className="text-emerald-400 font-semibold">▸ RootLayout <span className="text-gray-400 font-normal">— SSG Static Shell</span></div>
-                  <div className="text-blue-400 pl-3">↳ Client Leaves <span className="text-gray-400 font-normal">— Interactive Drawers</span></div>
-                  <div className="text-amber-400 pl-6">↳ Zustand Persist <span className="text-gray-400 font-normal">— Instant Local Sync</span></div>
+                <div className="sm:border-l sm:border-rule sm:pl-6 space-y-2">
+                  <div className="text-sm font-medium text-ink">Languages &amp; Tools</div>
+                  <p className="text-sm text-muted leading-relaxed">
+                    JavaScript (ES6+), TypeScript, Python, HTML5, CSS3, Linux, Bash
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Next.js 16</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">React 18</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TypeScript Strict</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Zustand</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Tailwind CSS</span>
+
+            <div className="pt-4 border-t border-rule flex flex-wrap gap-2">
+              <span className="chip">React 18</span>
+              <span className="chip">Next.js (App Router)</span>
+              <span className="chip">Vite</span>
+              <span className="chip">Tailwind CSS</span>
+              <span className="chip">CSS Modules</span>
+              <span className="chip">React Router DOM</span>
+              <span className="chip">Zustand</span>
+              <span className="chip">Recharts</span>
             </div>
           </div>
 
-          {/* Bento 2: AI & Neural Systems (1-col) */}
-          <div className="rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-amber-500/40 transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-2.5 rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500/30">
-                  <Brain className="w-6 h-6" />
+          {/* Panel 2: QA & Engineering Practices + Tools & Systems */}
+          <div className="panel-cell lg:col-span-5 flex flex-col justify-between gap-6">
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <ShieldCheck className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
+                  <span className="text-sm text-muted font-medium">QA &amp; Systems</span>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono">
-                  Postgraduate
-                </span>
+                <span className="chip chip--accent">Lab Instruction</span>
               </div>
-              <h4 className="font-display font-bold text-xl text-white mb-2">Artificial Intelligence &amp; Neural Systems</h4>
-              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
-                MSc in AI Scholar at Ethiopian Defense University. Researching deep neural architectures, computer vision models, and algorithm optimization with Python OOP.
+
+              <h3 className="text-ink">QA &amp; Engineering Practices</h3>
+
+              <p className="text-muted text-sm leading-relaxed max-w-[65ch]">
+                Grounded in academic lab instruction and rigorous code reviews at Ethiopian Defense University.
               </p>
-              <div className="p-3 rounded-lg bg-charcoal-300 border border-white/5 font-mono text-xs space-y-1">
-                <div><span className="text-amber-400">Institution:</span> Ethiopian Defense Univ</div>
-                <div><span className="text-diogo-cyan">Core Language:</span> Python OOP &amp; ML</div>
-                <div className="text-[11px] text-gray-400">Computer vision and neural fine-tuning</div>
-              </div>
+
+              <dl className="pt-4 border-t border-rule space-y-2 text-sm">
+                <div className="flex items-baseline justify-between gap-3">
+                  <dt className="text-muted">Reviews</dt>
+                  <dd className="text-ink-2 text-right">Code Reviews &amp; Design Patterns</dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-3">
+                  <dt className="text-muted">Diagnostics</dt>
+                  <dd className="text-ink-2 text-right">Debugging &amp; Troubleshooting</dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-3">
+                  <dt className="text-muted">Foundations</dt>
+                  <dd className="text-ink-2 text-right">OOP, Data Structures &amp; Algorithms</dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-3">
+                  <dt className="text-muted">Docs</dt>
+                  <dd className="text-ink-2 text-right">Technical Documentation</dd>
+                </div>
+              </dl>
             </div>
-            <div className="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Neural Networks</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Computer Vision</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Python 3</span>
+
+            <div className="pt-4 border-t border-rule space-y-2">
+              <div className="text-xs text-muted font-medium">Tools &amp; Systems</div>
+              <div className="flex flex-wrap gap-2">
+                <span className="chip">Git</span>
+                <span className="chip">GitHub</span>
+                <span className="chip">Linux</span>
+                <span className="chip">VS Code</span>
+              </div>
             </div>
           </div>
 
-          {/* Bento 3: Backend Systems & Distributed API Architecture (3-col full width, Currently Learning) */}
-          <div className="lg:col-span-3 rounded-xl bg-charcoal-200 border border-white/10 p-6 sm:p-7 shadow-elevation-2 flex flex-col justify-between hover:border-diogo-blue/40 transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-diogo-blue/20 text-diogo-cyan border border-diogo-cyan/30">
-                    <Server className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-semibold text-diogo-cyan uppercase font-mono">Systems &amp; Architecture</span>
-                    <h4 className="font-display font-bold text-xl text-white">Backend Systems &amp; Distributed API Architecture</h4>
-                  </div>
+          {/* Panel 3: Backend & Databases */}
+          <div className="panel-cell lg:col-span-12 space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 text-sm text-muted font-medium">
+                  <Server className="w-5 h-5 text-cool shrink-0" aria-hidden="true" />
+                  <span>Backend &amp; Databases</span>
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono font-medium">
-                  Currently Learning
-                </span>
+                <h3 className="text-ink">Back-End Engineering &amp; Persistence</h3>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Actively learning and mastering modern backend architectures using Node.js, Nest.js, and PostgreSQL. Focusing on modular enterprise controllers, dependency injection patterns, relational schema modeling, and robust RESTful API design.
-              </p>
-
-              {/* 4-Step Stepper showcasing Node.js, Nest.js, PostgreSQL */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
-                <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-diogo-blue text-xs font-bold block mb-1">01 • Runtime</span>
-                  <span className="text-white font-semibold block">Node.js</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Async event loop &amp; I/O</span>
-                </div>
-                <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-diogo-cyan text-xs font-bold block mb-1">02 • Framework</span>
-                  <span className="text-white font-semibold block">Nest.js</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Modular DI &amp; controllers</span>
-                </div>
-                <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-emerald-400 text-xs font-bold block mb-1">03 • Persistence</span>
-                  <span className="text-white font-semibold block">PostgreSQL</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Relational schema &amp; SQL</span>
-                </div>
-                <div className="p-3 rounded bg-charcoal-300 border border-white/5">
-                  <span className="text-amber-400 text-xs font-bold block mb-1">04 • Architecture</span>
-                  <span className="text-white font-semibold block">REST APIs</span>
-                  <span className="text-gray-400 text-[10px] mt-1 block">Clean contracts &amp; routing</span>
-                </div>
-              </div>
+              <span className="chip chip--accent">In Progress (IBT Ethiopia)</span>
             </div>
-            <div className="pt-4 mt-6 border-t border-white/10 flex flex-wrap gap-1.5">
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Node.js</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Nest.js</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">PostgreSQL</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">RESTful APIs</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">TypeScript</span>
-              <span className="px-2 py-0.5 rounded bg-charcoal-300 text-gray-300 font-mono text-xs">Modular Architecture</span>
+
+            <p className="text-muted text-sm leading-relaxed max-w-[65ch]">
+              Currently progressing into the back-end phase of IBT Ethiopia&apos;s Software &amp; QA Engineering
+              program covering Node.js, NestJS, PostgreSQL, and REST APIs.
+            </p>
+
+            <div className="flex flex-wrap gap-2 pt-4 border-t border-rule">
+              <span className="chip">Node.js</span>
+              <span className="chip">NestJS</span>
+              <span className="chip">PostgreSQL</span>
+              <span className="chip">REST APIs</span>
+              <span className="chip">LocalStorage / SessionStorage</span>
             </div>
           </div>
         </div>

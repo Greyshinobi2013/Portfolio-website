@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://natnaelgetachew.dev';
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://portfolio-website-rho-three-54.vercel.app';
   return {
     rules: {
       userAgent: '*',

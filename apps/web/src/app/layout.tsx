@@ -1,54 +1,50 @@
 import type { Metadata, Viewport } from 'next';
-import { Nunito, Roboto, JetBrains_Mono } from 'next/font/google';
+import { Host_Grotesk, Atkinson_Hyperlegible_Mono } from 'next/font/google';
 import './globals.css';
-import ParticleBackdrop from '@/components/ParticleBackdrop';
 
-const nunitoFont = Nunito({
+const hostGrotesk = Host_Grotesk({
   subsets: ['latin'],
-  variable: '--font-display',
-  weight: ['300', '400', '600', '700', '800'],
+  variable: '--font-host',
+  weight: ['400', '500'],
   display: 'swap',
 });
 
-const robotoFont = Roboto({
+const atkinsonMono = Atkinson_Hyperlegible_Mono({
   subsets: ['latin'],
-  variable: '--font-sans',
-  weight: ['300', '400', '500', '700'],
+  variable: '--font-atkinson-mono',
+  weight: ['400', '500'],
   display: 'swap',
+  adjustFontFallback: false,
 });
 
-const monoFont = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://natnaelgetachew.dev';
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://portfolio-website-rho-three-54.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
+    default: 'Natnael Getachew | Software & QA Engineering Intern',
     template: '%s | Natnael Getachew',
   },
   description:
-    'Portfolio of Natnael Getachew: Software & QA Engineer, MSc Artificial Intelligence Scholar at Ethiopian Defense University. Specializing in Next.js 16, TypeScript, Python, and TeleBirr fintech payment rails.',
+    'Computer Engineering graduate and Master of Technology in Artificial Intelligence candidate. Building TypeScript, React 18, Next.js App Router, Python, Node.js, NestJS, and PostgreSQL applications.',
   keywords: [
     'Natnael Getachew',
-    'Software & QA Engineer',
-    'QA Engineer',
-    'Software Developer',
-    'MSc Artificial Intelligence',
+    'Software & QA Engineering Intern',
+    'Software Development Intern',
+    'Master of Technology in Artificial Intelligence',
     'Addis Ababa',
     'Ethiopia',
-    'Next.js 16 App Router',
+    'Next.js App Router',
     'React 18',
     'TypeScript',
     'Python',
-    'TeleBirr API',
+    'Node.js',
+    'NestJS',
+    'PostgreSQL',
     'Ethiopian Defense University',
     'Debre Birhan University',
+    'IBT Ethiopia',
   ],
   authors: [{ name: 'Natnael Getachew', url: siteUrl }],
   creator: 'Natnael Getachew',
@@ -64,24 +60,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    title: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
+    title: 'Natnael Getachew | Software & QA Engineering Intern',
     description:
-      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr fintech payment rails.',
+      'Computer Engineering graduate and Master of Technology in Artificial Intelligence candidate specializing in TypeScript, React 18, Next.js (App Router), Node.js, NestJS, and PostgreSQL.',
     siteName: 'Natnael Getachew Portfolio',
     images: [
       {
         url: '/avatar.webp',
-        width: 800,
-        height: 600,
-        alt: 'Natnael Getachew — Software & QA Engineer',
+        width: 440,
+        height: 440,
+        alt: 'Natnael Getachew, Software & QA Engineering Intern',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Natnael Getachew — Software & QA Engineer (MSc AI Scholar)',
+    title: 'Natnael Getachew | Software & QA Engineering Intern',
     description:
-      'Computer Engineering graduate, MSc Artificial Intelligence scholar, specializing in Next.js App Router, React 18, TypeScript, Python, and TeleBirr fintech payment rails.',
+      'Computer Engineering graduate and Master of Technology in Artificial Intelligence candidate specializing in TypeScript, React 18, Next.js (App Router), Node.js, NestJS, and PostgreSQL.',
     images: ['/avatar.webp'],
     creator: '@Greyshinobi2013',
   },
@@ -102,9 +98,9 @@ const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Natnael Getachew',
-  jobTitle: 'Software & QA Engineer',
+  jobTitle: 'Software & QA Engineering Intern',
   email: 'mailto:getachewnatnael55@gmail.com',
-  telephone: '+251923789370',
+  telephone: '+251983833337',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Addis Ababa',
@@ -114,37 +110,43 @@ const personJsonLd = {
     {
       '@type': 'EducationalOrganization',
       name: 'Debre Birhan University',
-      award: 'BSc in Computer Engineering',
+      award: 'Bachelor of Science in Computer Engineering',
     },
     {
       '@type': 'EducationalOrganization',
       name: 'Ethiopian Defense University',
-      award: 'MSc in Artificial Intelligence',
+      award: 'Master of Technology in Artificial Intelligence',
     },
     {
       '@type': 'EducationalOrganization',
-      name: 'IBT College of Canada',
-      award: 'Advanced Digital Skills: Software Development & QA',
+      name: 'IBT Ethiopia – Advanced Digital Skills Training',
+      award: 'Full stack Software & QA Engineering',
     },
   ],
   knowsAbout: [
-    'Next.js 16 App Router',
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'Python',
     'React 18',
-    'TypeScript Strict',
-    'Python 3',
-    'Quality Assurance & Boundary Testing',
-    'TeleBirr Fintech API',
-    'Deep Learning & Computer Vision',
+    'Next.js (App Router)',
+    'Tailwind CSS',
+    'Node.js',
+    'NestJS',
     'PostgreSQL',
+    'REST APIs',
+    'Code Reviews',
+    'Debugging & Troubleshooting',
+    'Object-Oriented Programming (OOP)',
+    'Data Structures & Algorithms',
   ],
   sameAs: [
     'https://github.com/Greyshinobi2013',
-    'https://www.linkedin.com/in/natnael-getachew-25b8211ba',
+    'https://www.linkedin.com/in/natnaelgetachew/',
   ],
 };
 
 export const viewport: Viewport = {
-  themeColor: '#1b1b1b',
+  themeColor: '#111316',
 };
 
 export default function RootLayout({
@@ -155,12 +157,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${nunitoFont.variable} ${robotoFont.variable} ${monoFont.variable} font-sans`}
+      className={`${hostGrotesk.variable} ${atkinsonMono.variable}`}
       suppressHydrationWarning
     >
       <head>
         <link rel="dns-prefetch" href="https://github.com" />
-        <link rel="dns-prefetch" href="https://linkedin.com" />
+        <link rel="dns-prefetch" href="https://www.linkedin.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -168,21 +170,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        suppressHydrationWarning
-        className="bg-charcoal text-[#e5e5e5] antialiased selection:bg-[#037daf]/40 selection:text-white min-h-screen relative"
-      >
-        {/* Accessibility Skip Link */}
-        <a
-          href="#about"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-[#0a74db] focus:text-white focus:rounded focus:shadow-elevation-8 focus:font-mono focus:text-xs uppercase tracking-wider"
-        >
+      <body suppressHydrationWarning className="bg-paper text-ink antialiased min-h-screen">
+        <a href="#about" className="skip-link">
           Skip to main content
         </a>
-
-        {/* Interactive Constellation Mesh */}
-        <ParticleBackdrop />
-
         {children}
       </body>
     </html>
